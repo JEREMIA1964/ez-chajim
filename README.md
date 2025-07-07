@@ -1,0 +1,19 @@
+# Ez Chajim WOZU-System
+
+**WOZU dieses System?**  
+Um das WOZU-TOR in die digitale Welt zu bringen!
+
+## 🔯 Die Vision
+
+> "WOZU ist nicht eine Frage – sondern das TOR."
+
+Dieses System transformiert Sprache von Trennung zu Einheit.
+
+## 🚀 Schnellstart
+
+```bash
+# Installation
+make install
+
+# Test
+make run

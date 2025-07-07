@@ -1,0 +1,13 @@
+# Core
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+
+# Entwicklung
+pytest>=7.4.0
+black>=23.7.0
+flake8>=6.1.0
+
+# Später für erweiterte Features
+# fastapi>=0.103.0
+# redis>=5.0.0
+# pymongo>=4.5.0
