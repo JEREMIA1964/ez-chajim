@@ -1,0 +1,17 @@
+name: Trigger Auto-Update
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger Central Update
+      run: |
+        curl -X POST \
+        -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+        https://api.github.com/repos/JEREMIA1964/ez-chajim-auto-update/dispatches \
+        -d '{"event_type":"update-modules"}'
+
