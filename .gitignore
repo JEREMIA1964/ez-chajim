@@ -1,25 +1,6 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-env/
-ENV/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+*.pyc
+__pychache__/
 .DS_Store
-Thumbs.db
-
-# Projekt-spezifisch
 *.log
+venv/
 .env
-secrets/
-temp/

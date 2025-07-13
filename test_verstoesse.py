@@ -1,8 +1,8 @@
 # Test-Datei mit WWAQ-Verstößen
-def process_kelim():
-    """Die Kelim wurden zerbrochen"""  # Fehler: Kelim statt Qelim
-    return "Kabbala"  # Fehler: Kabbala statt Qabbala
+def process_qelim():
+    """Die Qelim wurden geborsten"""  # Fehler: Qelim statt Qelim
+    return "Qabbala"  # Fehler: Qabbala statt Qabbala
 
 def destroy_structure():
-    """Zerstört die Struktur"""  # Fehler: zerstört statt wandelt
+    """Zerstört die Struktur"""  # Fehler: gewandelt statt wandelt
     pass

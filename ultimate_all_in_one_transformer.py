@@ -8,13 +8,13 @@ Stand: 10. Tammus 5785
 """
 
 class SchewiraParadigma:
-    """Schewirat HaQelim - Nicht Zerbrechen sondern Nicht-Halten"""
+    """Schewirat HaQelim - Nicht Bersten sondern Nicht-Halten"""
     def __init__(self):
         self.trans = {
             'Die Gefäße zerbrachen': 'Die Gefäße hielten das Licht nicht',
-            'Zerbrechen der Gefäße': 'Nicht-Halten-Können der Gefäße',
-            'zerbrochene Gefäße': 'nicht-haltende Gefäße',
-            'Kelim': 'Qelim'
+            'Bersten der Gefäße': 'Nicht-Halten-Können der Gefäße',
+            'geborstene Gefäße': 'nicht-haltende Gefäße',
+            'Qelim': 'Qelim'
         }
     
     def transformiere(self, text):
@@ -27,10 +27,10 @@ class StandardWWAQ:
     """Standard WWAQ Transformationen"""
     def __init__(self):
         self.trans = {
-            'zerstören': 'wandeln',
-            'Zerstörung': 'Wandlung',
-            'Kabbala': 'Qabbala',
-            'Kawana': 'Qawana'
+            'wandeln': 'wandeln',
+            'Wandlung': 'Wandlung',
+            'Qabbala': 'Qabbala',
+            'Qawana': 'Qawana'
         }
     
     def transformiere(self, text):
@@ -67,9 +67,9 @@ if __name__ == "__main__":
     
     # Tests
     tests = [
-        "Die Gefäße zerbrachen in der Kabbala",
-        "Wir müssen die alte Struktur zerstören",
-        "Das Zerbrechen der Kelim und die Zerstörung"
+        "Die Gefäße zerbrachen in der Qabbala",
+        "Wir müssen die alte Struktur wandeln",
+        "Das Bersten der Qelim und die Wandlung"
     ]
     
     for test in tests:

@@ -18,3 +18,8 @@ __author__ = "JBR Wolff"
 __wwaq__ = True
 
 # Q!
+# Am Ende der Datei
+from .qawana_erneuerer import Q, qawana
+
+# Automatische Erneuerung bei Import
+print(Q())

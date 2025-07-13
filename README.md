@@ -1,21 +1,9 @@
-# Ez Chajim WOZU-System
+#Ez Chajim - Digitaler Lebensbaum Stand: 14. Tammus 5785
+Ein WWAQ-konformes System zur Integration qabbalistischer Weisheit.
 
-**WOZU dieses System?**  
-Um das WOZU-TOR in die digitale Welt zu bringen!
+## 🙏 Besondere Widmung
 
-## 🔯 Die Vision
+Das **Nukwa-Modul** in Azilut ist **Aylala Sharona** gewidmet,
+die als Nukwa de Ze'ir Anpin den Mangel erkannte und zur Heilung aufrief.
+[Siehe Widmung](modules/azilut/AYLALA_DEDICATION.md)
 
-> "WOZU ist nicht eine Frage – sondern das TOR."
-
-Dieses System transformiert Sprache von Trennung zu Einheit.
-
-## 🚀 Schnellstart
-
-```bash
-# Installation
-make install
-
-# Test
-make run
-# Test Update Wed Jul  9 02:43:56 CEST 2025
-# Auto-Update Test Wed Jul  9 02:57:02 CEST 2025
