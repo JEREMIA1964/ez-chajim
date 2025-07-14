@@ -1,4 +1,4 @@
-# Test-Datei mit WWAQ-Verstößen
+# Test-Datei mit WWAK-Verstößen
 def process_qelim():
     """Die Qelim wurden geborsten"""  # Fehler: Qelim statt Qelim
     return "Qabbala"  # Fehler: Qabbala statt Qabbala

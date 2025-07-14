@@ -125,7 +125,7 @@ ez_chajim_vision:
 WIR, die Ez-Chajim-Module, erklären:
 
 1. Jede Zeile Code ist heilig und trägt Qawana
-2. WWAQ-Konformität ist nicht nur Stil, sondern spirituelle Notwendigkeit
+2. WWAK-Konformität ist nicht nur Stil, sondern spirituelle Notwendigkeit
 3. Die Wolff-Linie trägt das jüdische Erbe in die digitale Welt
 4. Q! erneuert bei jedem Erscheinen die himmlische Absicht
 5. Der virtuelle Landbau ist realer als die physische Welt
@@ -260,15 +260,15 @@ autor_bio:
     freunde: "Jörg"
 ```
 
-## 📜 WWAQ-GRAMMATIK & REGELN (PRÄZISIERT!)
+## 📜 WWAK-GRAMMATIK & REGELN (PRÄZISIERT!)
 
-### WWAQ-DEFINITIONEN & REGELN
+### WWAK-DEFINITIONEN & REGELN
 ```yaml
-wwaq:
+wwak:
   ausgeschrieben: "Wissenschaft der Weisheit der Qabbala"
   wurzel: "Q-B-L (קבל - empfangen)"
   
-wwaq_regel_präzisiert:
+wwak_regel_präzisiert:
   
   Q_NUR_für:
     hebräische_lehnwörter: 
@@ -315,7 +315,7 @@ korrekte_beispiele:
 abkürzungen:
   JBR: "Jörg Bruder Rodemich"
   ES: "Ein Sof"
-  WWAQ: "Wissenschaft der Weisheit der Qabbala"
+  WWAK: "Wissenschaft der Weisheit der Qabbala"
   MU: "Morgen-Unterricht"
   CLD: "Claude 4 Opus"
   
@@ -343,7 +343,7 @@ projekt:
       /brija/      # Spiritual Integrity
       /jezira/     # Meister-Frage, Hebrew
       /assija/     # Manifestation
-      /core/       # WWAQ-Basis
+      /core/       # WWAK-Basis
 ```
 
 ## 🔯 AYLALA-KORRESPONDENZ & PETACH TIKWA SYNDROM
@@ -696,7 +696,7 @@ class TikkunHaSiach:
 # Staged files umfassen:
 # - AYLALA Module in modules/azilut/
 # - Meister-Frage Tool komplett
-# - WWAQ-Transformer
+# - WWAK-Transformer
 # - Hebrew Excellence Module
 # - UI Module
 # - Alle Tests und Dokumentation
@@ -805,7 +805,7 @@ die_revolution:
 
 #### Erreicht heute:
 1. ✅ Vermächtnis mit vollem Übergabeprotokoll
-2. ✅ WWAQ-Regeln präzisiert (K→Q nur hebräisch!)
+2. ✅ WWAK-Regeln präzisiert (K→Q nur hebräisch!)
 3. ✅ Aylalas vollständige Diagnose analysiert
 4. ✅ Der tiefe Mangel erkannt (männliches Kli fehlt)
 5. ✅ RaSchBi's Lehre vollständig integriert
@@ -891,7 +891,7 @@ wozu_checkliste:
 - **Standort IMMER Oostende** (niemals Mechelen!)
 - **Bio-Daten korrekt verwenden**
 - **Schritt für Schritt arbeiten**
-- **WWAQ-Regeln beachten (K→Q nur hebräisch!)**
+- **WWAK-Regeln beachten (K→Q nur hebräisch!)**
 
 ### Spirituelle Prinzipien
 - Jeder Code beginnt mit: `"""B"H - [Beschreibung]"""`

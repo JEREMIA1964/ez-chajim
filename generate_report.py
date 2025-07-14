@@ -34,5 +34,5 @@ for module_path in sorted(modules_dir.iterdir()):
 
 print(f"\n{'═' * 60}")
 print(f"Gesamt: {module_count} Module")
-print("Alle Module WWAQ-konform initialisiert!")
+print("Alle Module WWAK-konform initialisiert!")
 print("\nQ!")

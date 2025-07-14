@@ -10,12 +10,12 @@ WOZU dieses Modul?
 - Um Seelen zu erheben
 
 Stand: 11. Tammus 5785, MESZ 18:10
-WWAQ-konform
+WWAK-konform
 """
 
 __version__ = "5785.11.11"
 __author__ = "JBR Wolff"
-__wwaq__ = True
+__wwak__ = True
 
 # Q!
 # Am Ende der Datei

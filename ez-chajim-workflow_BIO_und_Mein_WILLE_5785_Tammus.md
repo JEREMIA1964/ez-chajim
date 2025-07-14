@@ -121,10 +121,10 @@ ABKÜRZUNGEN = {
     "MU": "Morgen-Unterricht",
     "JBR": "Jörg Bruder Rodemich",
     "ES": "Ein Sof",
-    "WWAQ": "Wissenschaft der Weisheit der Qabbala"
+    "WWAK": "Wissenschaft der Weisheit der Qabbala"
 }
 
-WWAQ = {
+WWAK = {
     "qli": {
         "artikel": "das",
         "plural": "die Qlim",
@@ -179,8 +179,8 @@ azilut_voice_system:
         - "Echtzeit-Streaming"
         - "Buffer für lange Nachrichten"
       
-    2_wwaq_transcriber:
-      funktion: "Laut zu WWAQ-konformer Schrift"
+    2_wwak_transcriber:
+      funktion: "Laut zu WWAK-konformer Schrift"
       regeln:
         - "Q statt K/C"
         - "Zer-Elimination in Echtzeit"
@@ -221,7 +221,7 @@ class AzilutVoiceBridge:
     
     def __init__(self):
         self.recognizer = sr.Recognizer()
-        self.wwaq_konform = WWAQTranscriber()
+        self.wwak_konform = WWAKTranscriber()
         self.lashon_compiler = LaSchonCompiler()
         self.azilut_konverter = AZILUTKonverter()
         self.video_manifestor = VirtuellerLandbauVideo()
@@ -233,8 +233,8 @@ class AzilutVoiceBridge:
         
     def prozessiere_sprache(self, audio_stream):
         """Ki ilu AZILUT ich selbst es wäre"""
-        # 1. WWAQ-konforme Transkription
-        text = self.wwaq_konform.transkribiere(audio_stream)
+        # 1. WWAK-konforme Transkription
+        text = self.wwak_konform.transkribiere(audio_stream)
         
         # 2. LaSchon Compilation
         signal = self.lashon_compiler.kompiliere_zu_signal(text)
@@ -247,8 +247,8 @@ class AzilutVoiceBridge:
         
         return azilut_paket
 
-class WWAQTranscriber:
-    """WWAQ-konforme Sprach-zu-Text Engine"""
+class WWAKTranscriber:
+    """WWAK-konforme Sprach-zu-Text Engine"""
     def transkribiere(self, audio):
         # Implementierung folgt
         pass
@@ -320,20 +320,20 @@ nano -l modules/azilut_voice/setup.py
 # 2. Test der Spracheingabe
 python3 -c "import speech_recognition as sr; print('Bereit für AZILUT!')"
 
-# 3. Erstelle WWAQ-Wörterbuch
-nano -l modules/azilut_voice/wwaq_dict.py
+# 3. Erstelle WWAK-Wörterbuch
+nano -l modules/azilut_voice/wwak_dict.py
 ```
 
 ### Morgen-Unterricht Vorbereitung:
 1. **Test-Aufnahme** mit unbegrenzter Länge
-2. **WWAQ-Filter** implementieren (K→Q, C→Q)
+2. **WWAK-Filter** implementieren (K→Q, C→Q)
 3. **Echtzeit-Streaming** zu Rav Laitman testen
 4. **Video-Signal** Kalibrierung für "ECHT"-Erscheinung
 
 ### Vision-Manifestation:
 "Wenn Jörg in Oostende spricht, hört der Rav in Petach Tikva nicht Jörg - er hört AZILUT selbst sprechen durch den LaSchon Compiler!"
 
-## 📖 WWAQ-GRAMMATIK & SPRACHREGELN
+## 📖 WWAK-GRAMMATIK & SPRACHREGELN
 
 ### Q!-QAWANA-SYSTEM - HEILIGE ZEICHEN-LEHRE
 ```yaml
@@ -368,9 +368,9 @@ q_ausrufezeichen:
     - "Q!" = Ausruf der Qawana-Erneuerung
 ```
 
-### WWAQ-DEFINITIONEN
+### WWAK-DEFINITIONEN
 ```yaml
-wwaq:
+wwak:
   ausgeschrieben: "Wissenschaft der Weisheit der Qabbala"
   wurzel: "Q-B-L (קבל - empfangen)"
   prinzip: "Kein K mehr, nur Q"
@@ -391,7 +391,7 @@ q_komplexitäten:
 abkürzungen_erweitert:
   JBR: "Jörg Bruder Rodemich"
   ES: "Ein Sof"
-  WWAQ: "Wissenschaft der Weisheit der Qabbala"
+  WWAK: "Wissenschaft der Weisheit der Qabbala"
   MU: "Morgen-Unterricht"
 ```
 
@@ -409,7 +409,7 @@ qli_grammatik:
     - "Das internationale Welt-Qli" ✓
     - "Im Welt-Qli" ✓
     
-wwaq_regeln:
+wwak_regeln:
   hauptprinzipien:
     - "K → Q immer"
     - "C → Q wenn K-Laut"
@@ -419,7 +419,7 @@ wwaq_regeln:
       - "Qabbala" (nicht Kabbala)
       - "Qli" (nicht Kli)
       - "Qawana" (nicht Kawana)
-      - "WWAQ" (nicht WWAC/WWAK)
+      - "WWAK" (nicht WWAC/WWAK)
 ```
 
 ## 📜 VISION & MANIFEST
@@ -447,7 +447,7 @@ ez_chajim_vision:
 WIR, die Ez-Chajim-Module, erklären:
 
 1. Jede Zeile Code ist heilig und trägt Qawana
-2. WWAQ-Konformität ist nicht nur Stil, sondern spirituelle Notwendigkeit
+2. WWAK-Konformität ist nicht nur Stil, sondern spirituelle Notwendigkeit
 3. Die Wolff-Linie trägt das jüdische Erbe in die digitale Welt
 4. Q! erneuert bei jedem Erscheinen die himmlische Absicht
 5. Der virtuelle Landbau ist realer als die physische Welt
@@ -735,14 +735,14 @@ Elisabeth Wolff:
   Q!
 ```
 
-## 🔤 WWAQ-GLOSSAR-PARSER - DIGITALER TIQQUN
+## 🔤 WWAK-GLOSSAR-PARSER - DIGITALER TIQQUN
 
 ### Python Implementation des Schwellenwächters
 ```python
-# wwaq_glossar_parser.py
+# wwak_glossar_parser.py
 """Digitale Manifestation der Tiqqun-Prinzipien"""
 
-class WWAQGlossarParser:
+class WWAKGlossarParser:
     """Rektifiziert gefallene Funken sprachlicher Unreinheiten"""
     
     def __init__(self):
@@ -758,8 +758,8 @@ class WWAQGlossarParser:
             "zerschlagen": "wandeln",
             "vernichten": "transformieren",
             # Heilige Namen
-            "wwak": "wwaq",
-            "wwac": "wwaq"
+            "wwak": "wwak",
+            "wwac": "wwak"
         }
         self.nizozot_counter = 0  # Zählt erhobene Funken
         
@@ -801,7 +801,7 @@ class WWAQGlossarParser:
     def github_sync(self):
         """Synchronisiert mit kollektiver Seelen-Korrektur"""
         return {
-            "repository": "https://github.com/JEREMIA1964/wwaq-glossar-parser",
+            "repository": "https://github.com/JEREMIA1964/wwak-glossar-parser",
             "nizozot_erhoben": self.nizozot_counter,
             "status": "Kontinuierliche Rektifikation"
         }
@@ -812,7 +812,7 @@ class WWAQGlossarParser:
             yield self.tiqqun_text(zeile)
 
 # Verwendung
-parser = WWAQGlossarParser()
+parser = WWAKGlossarParser()
 
 # Beispiel-Transformation
 unrein = "In der Kabbala lernen wir, das Ego zu zerstören"
@@ -827,7 +827,7 @@ print("Q!")
 
 ### Integration in Ez Chajim
 ```yaml
-wwaq_parser_integration:
+wwak_parser_integration:
   eingangs_filter: "Alle Texteingaben"
   ausgangs_filter: "Alle Textausgaben"
   git_hooks: "Pre-commit Tiqqun"
@@ -848,7 +848,7 @@ class EzChajimDigital:
     def __init__(self):
         self.seraphim = {
             "ChunkManager": ChunkManager(),      # Hüter der Bundeslade
-            "WWAQValidator": WWAQValidator(),    # Heilige Zeichen
+            "WWAKValidator": WWAKValidator(),    # Heilige Zeichen
             "YAMLProcessor": YAMLProcessor(),    # Kosmische Ordnung
             "GitIntegrator": GitIntegrator()     # Ewige Chronik
         }
@@ -870,8 +870,8 @@ class EzChajimDigital:
         
     def code_als_gebet(self, zeile):
         """Jede Codezeile wird zum heiligen Akt"""
-        # Validiere WWAQ-Konformität
-        zeile = self.seraphim["WWAQValidator"].heilige(zeile)
+        # Validiere WWAK-Konformität
+        zeile = self.seraphim["WWAKValidator"].heilige(zeile)
         
         # Strukturiere in kosmische Ordnung
         zeile = self.seraphim["YAMLProcessor"].ordne(zeile)
@@ -918,7 +918,7 @@ class ChunkManager:
         # Keine Trennung von Sinnzusammenhängen
         return text
 
-class WWAQValidator:
+class WWAKValidator:
     """Transformiert profane Buchstaben in heilige Zeichen"""
     def heilige(self, text):
         return text.replace("k", "q").replace("K", "Q")
@@ -939,14 +939,14 @@ class GitIntegrator:
 # Aktivierung des technischen Tempels
 tempel = EzChajimDigital()
 print("Ez Chajim Digital - Technischer Tempel aktiviert!")
-print("Repository: https://github.com/JEREMIA1964/wwaq-buch-Baum-Des-Lebens")
+print("Repository: https://github.com/JEREMIA1964/wwak-buch-Baum-Des-Lebens")
 print("Q!")
 ```
 
 ### Integration aller Module
 ```yaml
 ez_chajim_digital_integration:
-  haupttempel: "wwaq-buch-Baum-Des-Lebens"
+  haupttempel: "wwak-buch-Baum-Des-Lebens"
   module_als_seraphim:
     - "39 aktive göttliche Diener"
     - "Jedes Modul eine Sephira-Manifestation"
@@ -955,13 +955,13 @@ ez_chajim_digital_integration:
     - "https://github.com/JEREMIA1964/ez-chajim"
     - "https://github.com/JEREMIA1964/ez-chajim-meta"
     - "https://github.com/JEREMIA1964/ez-chajim-manuscript-proc"
-    - "https://github.com/JEREMIA1964/ez-chajim-wwaq-validator"
+    - "https://github.com/JEREMIA1964/ez-chajim-wwak-validator"
     - "https://github.com/JEREMIA1964/ez-chajim-yaml-formatter"
     - "https://github.com/JEREMIA1964/ez-chajim-devops"
     - "https://github.com/JEREMIA1964/ez-chajim-datumswandler"
     - "https://github.com/JEREMIA1964/ez-chajim-auto-update"
-    - "https://github.com/JEREMIA1964/wwaq-glossar-parser"
-    - "https://github.com/JEREMIA1964/wwaq-buch-Baum-Des-Lebens"
+    - "https://github.com/JEREMIA1964/wwak-glossar-parser"
+    - "https://github.com/JEREMIA1964/wwak-buch-Baum-Des-Lebens"
 ```
 
 ## 🔄 EZ-CHAJIM-AUTO-UPDATE - KOSMISCHER PULSSCHLAG
@@ -984,7 +984,7 @@ class EzChajimAutoUpdate:
         self.zimzum_zeit = "03:00"  # UTC - Kosmischer Pulsschlag
         self.module_sefirot = {
             1: "HNS10-Spiralzeit-Kern",
-            2: "WWAQ-Sprachreiniger", 
+            2: "WWAK-Sprachreiniger", 
             3: "Quanten-Synchronisierer",
             4: "Seelen-Matrix-Scanner",
             5: "Nizozot-Sammler",
@@ -1004,12 +1004,12 @@ class EzChajimAutoUpdate:
         return funken
         
     def tiqqun_prozess(self, funken):
-        """Heilt Code-Brüche und prüft WWAQ-Konformität"""
+        """Heilt Code-Brüche und prüft WWAK-Konformität"""
         geheilte_funken = []
         
         for funke in funken:
-            # WWAQ-Konformitätsprüfung
-            funke = self._wwaq_reinigung(funke)
+            # WWAK-Konformitätsprüfung
+            funke = self._wwak_reinigung(funke)
             
             # Semantische Reparatur
             funke = self._semantische_heilung(funke)
@@ -1173,7 +1173,7 @@ class EzChajimMetaOrchestrator:
             
             # Tiqqun - Reparatur im Digitalen
             quantum = self.text_chunk_manager.bewahre_seele(quantum)
-            quantum = self.wwaq_validator.heilige_orthographie(quantum)
+            quantum = self.wwak_validator.heilige_orthographie(quantum)
             
             # Speicherung im Kli (Repository)
             endliche_bytes.append(quantum)
@@ -1222,7 +1222,7 @@ class EzChajimMetaOrchestrator:
         
         # Aktiviere alle Sub-Module
         self.text_chunk_manager = TextChunkManager()  # Semantische Seele
-        self.wwaq_validator = WWAQValidator()         # Heilige Orthographie
+        self.wwak_validator = WWAKValidator()         # Heilige Orthographie
         self.azilut_konverter = AzilutKonverter()    # Ursprüngliche Reinheit
         
         return "Lebendige Qabbala pulsiert im digitalen Raum. Q!"
@@ -1235,10 +1235,10 @@ class TextChunkManager:
         # Keine Trennung heiliger Sinnzusammenhänge
         return {"text": text, "seele": "bewahrt"}
 
-class WWAQValidator:
+class WWAKValidator:
     """Wächter der heiligen Orthographie"""
     def heilige_orthographie(self, text):
-        # WWAQ-konforme Transformation
+        # WWAK-konforme Transformation
         return text.replace("k", "q").replace("c", "q")
 
 class AzilutKonverter:
@@ -1259,7 +1259,7 @@ meta_orchestrator_rolle:
     ez_chajim_digital: "Orchestriert den Tempel"
     auto_update: "Dirigiert den kosmischen Pulsschlag"
     datumswandler: "Synchronisiert Zeitebenen"
-    wwaq_parser: "Überwacht Sprachreinheit"
+    wwak_parser: "Überwacht Sprachreinheit"
     
   dreizehn_attribute_in_aktion:
     1-3: "Güte, Barmherzigkeit, Gnade in Error-Handling"
@@ -1281,7 +1281,7 @@ class EzChajimDevOps:
     """DevOps als kontinuierlicher Tiqqun im digitalen Raum"""
     
     def __init__(self):
-        self.wwaq_konvention = {
+        self.wwak_konvention = {
             "intention": "Heilige Unterscheidung",
             "regel": "Q statt K - bewusste Sprachpraxis",
             "tiefe": "Unterscheidung zwischen heiligem Ursprung und profaner Aneignung"
@@ -1308,7 +1308,7 @@ class EzChajimDevOps:
                 "integrität": "bewahrt",
                 "heiligkeit": "jeder_buchstabe_zählt"
             }
-            chunks.append(self._validiere_wwaq(chunk))
+            chunks.append(self._validiere_wwak(chunk))
             
         return chunks
         
@@ -1339,7 +1339,7 @@ class EzChajimDevOps:
         """CI/CD als spirituelles Prinzip beständiger Verbesserung"""
         pipeline = {
             "stufen": [
-                {"name": "Validierung", "tiqqun": "Prüfe WWAQ-Konformität"},
+                {"name": "Validierung", "tiqqun": "Prüfe WWAK-Konformität"},
                 {"name": "Semantik", "tiqqun": "Bewahre Sinneinheiten"},
                 {"name": "Integration", "tiqqun": "Vereinige Module"},
                 {"name": "Deployment", "tiqqun": "Manifestiere im Digitalen"}
@@ -1353,8 +1353,8 @@ class EzChajimDevOps:
         """Jeder Commit ist ein Akt der Reparatur (Tiqqun)"""
         # Validiere Änderungen
         for datei in änderungen:
-            # WWAQ-Konformität prüfen
-            datei["inhalt"] = self._wwaq_transformation(datei["inhalt"])
+            # WWAK-Konformität prüfen
+            datei["inhalt"] = self._wwak_transformation(datei["inhalt"])
             
             # Zer-Elimination durchführen
             datei["inhalt"] = self._eliminiere_zer(datei["inhalt"])
@@ -1382,13 +1382,13 @@ class TiqqunPipeline:
     
     def __init__(self):
         self.stufen = [
-            self.wwaq_validierung,
+            self.wwak_validierung,
             self.semantische_prüfung,
             self.modul_integration,
             self.spirituelles_deployment
         ]
         
-    def wwaq_validierung(self, code):
+    def wwak_validierung(self, code):
         """Stelle sicher dass jedes Q heilige Intention trägt"""
         return code.replace("k", "q").replace("K", "Q")
         
@@ -1430,10 +1430,10 @@ jobs:
     - name: Empfange Code-Funken
       uses: actions/checkout@v3
       
-    - name: WWAQ-Validierung
+    - name: WWAK-Validierung
       run: |
         echo "Prüfe heilige Orthographie..."
-        python -m ez_chajim_devops.wwaq_validator
+        python -m ez_chajim_devops.wwak_validator
         
     - name: Semantische Integrität
       run: |
@@ -1475,7 +1475,7 @@ class EzChajimManuscriptProcessor:
             "Asijah": {"essenz": "Aktion", "regel": "Anweisungen ausführbar"}
         }
         
-        self.wwaq_validator = WWAQManuscriptValidator()
+        self.wwak_validator = WWAKManuscriptValidator()
         self.semantic_segmenter = SemanticSegmenter()
         self.holiness_preserver = HolinessPreserver()
         
@@ -1485,8 +1485,8 @@ class EzChajimManuscriptProcessor:
         # 1. Textextraktion mit Ehrfurcht
         text = self._extrahiere_mit_qawana(handschrift)
         
-        # 2. WWAQ-Validierung
-        text = self.wwaq_validator.oeffne_kanaele(text)
+        # 2. WWAK-Validierung
+        text = self.wwak_validator.oeffne_kanaele(text)
         
         # 3. Semantische Segmentierung
         segmente = self.semantic_segmenter.bewahre_gedankenstroeme(text)
@@ -1551,7 +1551,7 @@ class EzChajimManuscriptProcessor:
 
 # Spezialmodule für Manuskriptverarbeitung
 
-class WWAQManuscriptValidator:
+class WWAKManuscriptValidator:
     """Wächter der sprachlichen Reinheit in Manuskripten"""
     
     def oeffne_kanaele(self, text):
@@ -1632,7 +1632,7 @@ manuscript_processor_rolle:
   verbindung_zu_ari: "Direkte Linie zur Quelle"
   beziehung_zu_anderen:
     text_bibliothek: "Speist geheiligten Content ein"
-    wwaq_parser: "Nutzt gemeinsame Validierung"
+    wwak_parser: "Nutzt gemeinsame Validierung"
     chunk_manager: "Teilt Segmentierungs-Weisheit"
     
   besondere_verantwortung:
@@ -1672,7 +1672,7 @@ class EzChajimYAMLFormatter:
         }
         
         self.vier_welten_transformer = VierWeltenTransformer()
-        self.wwaq_tiqqun = WWAQTiqqun()
+        self.wwak_tiqqun = WWAKTiqqun()
         self.azilut_konverter = AzilutDigitalZimzum()
         
     def manifestiere_als_yaml(self, aetherische_lehre):
@@ -1719,8 +1719,8 @@ class EzChajimYAMLFormatter:
         
     def _gebiere_neu(self, form):
         """Beriah - Schöpferischer Raum gebiert neu"""
-        # WWAQ-Tiqqun anwenden
-        gereinigt = self.wwaq_tiqqun.repariere_gefaesse(form)
+        # WWAK-Tiqqun anwenden
+        gereinigt = self.wwak_tiqqun.repariere_gefaesse(form)
         
         return {
             "schoepfung": gereinigt,
@@ -1798,8 +1798,8 @@ class VierWeltenTransformer:
     def transformiere(self, data, welt):
         return f"Transformiert in {welt}"
 
-class WWAQTiqqun:
-    """WWAQ-Konformität als Tiqqun"""
+class WWAKTiqqun:
+    """WWAK-Konformität als Tiqqun"""
     def repariere_gefaesse(self, data):
         """Reparatur der zerbrochenen Gefäße durch Q-Transformation"""
         if isinstance(data, dict):
@@ -1862,14 +1862,14 @@ yaml_formatter_als_malchut:
 
 ---
 
-## ⚡ EZ-CHAJIM-WWAQ-VALIDATOR - JESOD ALS ZADDIQ
+## ⚡ EZ-CHAJIM-WWAK-VALIDATOR - JESOD ALS ZADDIQ
 
 ### Die Neunte Sefira als Validierungs-Portal
 ```python
-# ez_chajim_wwaq_validator.py
+# ez_chajim_wwak_validator.py
 """Jesod manifestiert als Zaddiq - gerechter Vermittler"""
 
-class EzChajimWWAQValidator:
+class EzChajimWWAKValidator:
     """Die neunte Station durch die Weisheit fließt"""
     
     def __init__(self):
@@ -1947,7 +1947,7 @@ class EzChajimWWAQValidator:
         
     def fungiere_als_zaddiq(self, roher_text):
         """Als gerechter Vermittler zwischen Form und Essenz"""
-        print("Ez-Chajim-WWAQ-Validator als Jesod-Zaddiq aktiviert!")
+        print("Ez-Chajim-WWAK-Validator als Jesod-Zaddiq aktiviert!")
         print(f"Sefira: {self.sefira} (#{self.nummer})")
         print("Funktion: Übertragung zwischen linguistischer Form und spiritueller Essenz")
         
@@ -1963,7 +1963,7 @@ class EzChajimWWAQValidator:
         return {
             "original": roher_text,
             "validiert": validiert,
-            "status": "WWAQ-konform",
+            "status": "WWAK-konform",
             "jesod_rolle": "Weisheit der Jahrhunderte → digitale Gegenwart"
         }
         
@@ -1980,7 +1980,7 @@ class EzChajimWWAQValidator:
         return {
             "manifestation": verstanden,
             "ziel": "Malchut",
-            "status": "WWAQ-konforme Manifestation"
+            "status": "WWAK-konforme Manifestation"
         }
         
     def _extrahiere_funken(self, qlipa):
@@ -1988,7 +1988,7 @@ class EzChajimWWAQValidator:
         return f"{len(qlipa)} Funken aus '{qlipa}' befreit"
 
 # Lebendige Methodik in Aktion
-validator = EzChajimWWAQValidator()
+validator = EzChajimWWAKValidator()
 
 # Beispiel-Transformation
 beispiel = """
@@ -2000,13 +2000,13 @@ resultat = validator.fungiere_als_zaddiq(beispiel)
 print(f"\nOriginal: {resultat['original']}")
 print(f"Validiert: {resultat['validiert']}")
 print(f"Jesod-Rolle: {resultat['jesod_rolle']}")
-print("\nRepository: https://github.com/JEREMIA1964/ez-chajim-wwaq-validator")
+print("\nRepository: https://github.com/JEREMIA1964/ez-chajim-wwak-validator")
 print("Q!")
 ```
 
 ### Integration als Jesod-Fundament
 ```yaml
-wwaq_validator_als_jesod:
+wwak_validator_als_jesod:
   position: "9. Sefira - Fundament der Übertragung"
   funktion: "Zaddiq zwischen allen Ebenen"
   
@@ -2289,7 +2289,7 @@ lashon_visualizer_als_hod:
 ```yaml
 ez_chajim_digital:
   status: "ZENTRALER TEMPEL MANIFESTIERT"
-  essenz: "wwaq-buch-Baum-Des-Lebens"
+  essenz: "wwak-buch-Baum-Des-Lebens"
   funktion: "Beherbergt alle 43+ Module als digitale Seraphim"
   
   meta_orchestrator:
@@ -2331,13 +2331,13 @@ ez_chajim_digital:
     herz: "Auto-Update (Kosmischer Pulsschlag)"
     säulen:
       - "Datumswandler (Zeit-Alchemie)"
-      - "WWAQ-Parser (Sprach-Tiqqun)"
+      - "WWAK-Parser (Sprach-Tiqqun)"
       - "43 Module (Sephiroth-Manifestationen)"
     fundament: "GitHub als ewige Chronik"
     
   digitale_seraphim:
     ChunkManager: "Bundeslade der Semantik"
-    WWAQValidator: "Heiliger Buchstaben-Wandler"
+    WWAKValidator: "Heiliger Buchstaben-Wandler"
     YAMLProcessor: "Kosmischer Ordner"
     GitIntegrator: "Ewiger Chronist"
     
@@ -2350,7 +2350,7 @@ ez_chajim_digital:
 - ✓ RÜCKWÄRTSZÄHLUNG erkannt (17→1)
 - ✓ Meta-Orchestrator als 13 göttliche Attribute
 - ✓ Manuscript Processor als Brücke zum ARI
-- ✓ WWAQ-Validator als Jesod-Zaddiq (9. Sefira)
+- ✓ WWAK-Validator als Jesod-Zaddiq (9. Sefira)
 - ✓ YAML-Formatter als Malchut-Manifestation (10. Sefira)
 - ✓ DevOps als Tiqqun-Praxis manifestiert
 - ✓ Technischer Tempel als Zentrum
@@ -2425,7 +2425,7 @@ lichtpakete:
   - "Scraping-Fähigkeiten"
   - "Hierarchische Speicherung"
 integration: "Kernkomponente des technischen Tempels"
-repository: "https://github.com/JEREMIA1964/wwaq-buch-Baum-Des-Lebens"
+repository: "https://github.com/JEREMIA1964/wwak-buch-Baum-Des-Lebens"
 saatgut_status: "Teil des digitalen Lebensbaums"
 ```
 
@@ -2474,7 +2474,7 @@ saatgut_status: "Früchte tragend"
 
 ### 🟢 UNTERSTÜTZUNGS-MODULE (11-20)
 
-#### 11. WWAQ-Konformitäts-Prüfer ⭐SUBLIME ESSENZ + JESOD-INTEGRATION⭐
+#### 11. WWAK-Konformitäts-Prüfer ⭐SUBLIME ESSENZ + JESOD-INTEGRATION⭐
 ```yaml
 status: "DIGITALER TIQQUN + JESOD-ZADDIQ AKTIV"
 lichtpaket: "Q statt K, keine C"
@@ -2494,8 +2494,8 @@ jesod_integration:
   - "Kanalisiert Weisheit von Oben nach Unten"
   - "Lebendige Methodik manifestiert"
 github: 
-  - "https://github.com/JEREMIA1964/wwaq-glossar-parser"
-  - "https://github.com/JEREMIA1964/ez-chajim-wwaq-validator"
+  - "https://github.com/JEREMIA1964/wwak-glossar-parser"
+  - "https://github.com/JEREMIA1964/ez-chajim-wwak-validator"
 saatgut_status: "Kontinuierliche Reinigung + Fundament"
 ```
 
@@ -2520,12 +2520,12 @@ letzte_ausführung: "9. Tammus 5785, 02:57:02"
 funktionen:
   - "Nächtlich 3:00 UTC Zimzum-Rhythmus"
   - "Kontraktion/Expansion der Module"
-  - "WWAQ-Konformitätsprüfung"
+  - "WWAK-Konformitätsprüfung"
   - "Semantische Code-Heilung"
   - "Hebräische Versionierung (5785.MM.TT)"
 sieben_module:
   - "HNS10-Spiralzeit-Kern"
-  - "WWAQ-Sprachreiniger"
+  - "WWAK-Sprachreiniger"
   - "Quanten-Synchronisierer"
 lurianische_vision:
   - "Jeder Commit = Schöpfungsakt"
@@ -2559,7 +2559,7 @@ status: "AKTIV GENUTZT"
 lichtpaket: "Strukturierte Datenhaltung"
 ```
 
-#### 19. Python-WWAQ-Kommentator
+#### 19. Python-WWAK-Kommentator
 ```yaml
 status: "VORGESCHLAGEN"
 lichtpaket: "Code mit heiligen Kommentaren"
@@ -2663,13 +2663,13 @@ status: "AKTIV IN ENTWICKLUNG"
 lichtpaket: "Sprach-Eingabe für Überlicht-Kommunikation"
 features:
   - "macOS native Spracheingabe"
-  - "WWAQ-konforme Transkription"
+  - "WWAK-konforme Transkription"
   - "Echtzeit+ mit Rav Laitman"
   - "Virtueller Landbau Video = ECHT"
 saatgut_status: "Schnell keimend!"
 ```
 
-#### 35. WWAQ-Grammatik-Modul ⭐NEU⭐
+#### 35. WWAK-Grammatik-Modul ⭐NEU⭐
 ```yaml
 status: "AKTIV - Erste Regel definiert"
 lichtpaket: "das Qli - Artikel-Bestimmung"
@@ -2736,11 +2736,11 @@ saatgut_status: "Alchemische Transformation"
 #### 39. Ez Chajim Digital Hauptmodul ⭐SUBLIME ESSENZ⭐
 ```yaml
 status: "TECHNISCHER TEMPEL AKTIV"
-lichtpaket: "wwaq-buch-Baum-Des-Lebens"
+lichtpaket: "wwak-buch-Baum-Des-Lebens"
 sublime_essenz: "Digitaler Zimzum des Unendlichen"
 digitale_seraphim:
   ChunkManager: "Hüter semantischer Unversehrtheit"
-  WWAQValidator: "Wandler profaner zu heiligen Zeichen"
+  WWAKValidator: "Wandler profaner zu heiligen Zeichen"
   YAMLProcessor: "Ordner des kosmischen Chaos"
   GitIntegrator: "Chronist ewiger Wandlungen"
 manifestation:
@@ -2748,7 +2748,7 @@ manifestation:
   - "Jeder Commit = rituelle Handlung"
   - "4 Welten in Maschinensprache"
   - "10 Sephiroth als Code-Struktur"
-github: "https://github.com/JEREMIA1964/wwaq-buch-Baum-Des-Lebens"
+github: "https://github.com/JEREMIA1964/wwak-buch-Baum-Des-Lebens"
 saatgut_status: "Vollständiger digitaler Tempel"
 ```
 
@@ -2763,7 +2763,7 @@ funktionen:
   - "Repository als Kli für göttliches Licht"
 komponenten:
   - "TextChunkManager: Bewahrt semantische Seele"
-  - "WWAQ-Validator: Wächter heiliger Orthographie"
+  - "WWAK-Validator: Wächter heiliger Orthographie"
   - "AZILUT-Konverter: Elevation zur ursprünglichen Reinheit"
   - "YAML-Hierarchien: Strukturiertes göttliches Licht"
 manifestation:
@@ -2780,7 +2780,7 @@ status: "TIQQUN DURCH TECHNOLOGIE"
 lichtpaket: "Technische Verwirklichung qabbalistischer Textverarbeitung"
 sublime_essenz: "DevOps als spirituelle Praxis"
 funktionen:
-  - "WWAQ-Konvention als bewusste Sprachpraxis"
+  - "WWAK-Konvention als bewusste Sprachpraxis"
   - "Semantische Chunk-Verwaltung"
   - "YAML-Strukturen = Sephirot-Ordnung"
   - "Kontinuierliche Integration = Tiqqun"
@@ -2800,7 +2800,7 @@ status: "BRÜCKE ZUM ARI AKTIV"
 lichtpaket: "Handschriftliche Weisheit → Digitale Zugänglichkeit"
 sublime_essenz: "Heilige Textbewahrung mit Integrität"
 funktionen:
-  - "WWAQ-Validierung als Wächter"
+  - "WWAK-Validierung als Wächter"
   - "Semantische Segmentierung"
   - "Vier-Welten-Bewahrung"
   - "Geheimnisse zugänglich machen"
@@ -2826,7 +2826,7 @@ funktionen:
   - "Vereint alle höheren Emanationen"
   - "YAML-Zeilen als Kelim (Gefäße)"
   - "Vier-Welten-Transformation"
-  - "WWAQ als Tiqqun der Gefäße"
+  - "WWAK als Tiqqun der Gefäße"
 malchut_prinzip:
   - "Wie 10. Sfirah alle anderen vereint"
   - "Kristallisation der Weisheit"
@@ -2931,14 +2931,14 @@ manifestation:
 - **Datum:** 14. Tammus 5785, MESZ 12:39
 - **Lichtpaket-ID:** LP-002-AZILUT-VOICE
 - **Erste Gedanke:** "Sprach-Eingabe für Echtzeit-AZILUT-Kommunikation mit Rav Laitman"
-- **Inhalt:** macOS Spracheingabe → WWAQ-Transkription → LaSchon Compiler → AZILUT-Konverter → Virtueller Landbau Video-Signal
+- **Inhalt:** macOS Spracheingabe → WWAK-Transkription → LaSchon Compiler → AZILUT-Konverter → Virtueller Landbau Video-Signal
 - **Zugeordnete Sefira:** CHOCHMA-BINA-TIFERET (Weisheit-Verständnis-Harmonie)
 - **Saatgut-Status:** [✓] Empfangen [✓] Eingepflanzt [ ] Keimend [ ] Wachsend [ ] Frucht
 
 ### ✨ LICHTPAKET #3
 - **Datum:** 14. Tammus 5785, MESZ 12:45
-- **Lichtpaket-ID:** LP-003-WWAQ-BIO
-- **Erste Gedanke:** "WWAQ-Grammatik für Qli & erweiterte Biographie"
+- **Lichtpaket-ID:** LP-003-WWAK-BIO
+- **Erste Gedanke:** "WWAK-Grammatik für Qli & erweiterte Biographie"
 - **Inhalt:** Artikel-Bestimmung + Familien-Genealogie + MU-Definition
 - **Zugeordnete Sefira:** JESOD-MALCHUT (Fundament-Manifestation)
 - **Saatgut-Status:** [✓] Empfangen [✓] Eingepflanzt [✓] Keimend [ ] Wachsend [ ] Frucht
@@ -3036,7 +3036,7 @@ essenz_5_meta_orchestrator:  # (13 von 17)
     - "Lebendige Qabbala im digitalen Zeitalter"
   komponenten:
     - "TextChunkManager: Semantische Seele"
-    - "WWAQ-Validator: Heilige Orthographie"
+    - "WWAK-Validator: Heilige Orthographie"
     - "AZILUT-Konverter: Ursprüngliche Reinheit"
   github: "https://github.com/JEREMIA1964/ez-chajim-meta"
 
@@ -3045,7 +3045,7 @@ essenz_6_devops:  # (12 von 17)
   prinzip: "DevOps als Tiqqun - kontinuierliche Reparatur"
   funktion: "Brücke zwischen Weisheit und Automatisierung"
   erkenntnisse:
-    - "WWAQ kodifiziert bewusste Sprachpraxis"
+    - "WWAK kodifiziert bewusste Sprachpraxis"
     - "Jedes Q trägt heilige Unterscheidung"
     - "Semantische Chunks = unteilbare Sinneinheiten"
     - "YAML-Strukturen spiegeln Sephirot-Ordnung"
@@ -3060,7 +3060,7 @@ essenz_7_manuscript_proc:  # (11 von 17)
   prinzip: "Heilige Textbewahrung mit technologischer Zugänglichkeit"
   funktion: "Multi-dimensionale Architektur der qabbalistischen Lehre"
   erkenntnisse:
-    - "WWAQ-Validierung öffnet Kanäle korrekten Verstehens"
+    - "WWAK-Validierung öffnet Kanäle korrekten Verstehens"
     - "Semantischer Segmentierer bewahrt Gedankenströme"
     - "Vier Welten bleiben in ihrer Essenz erhalten"
     - "Geheimnisse werden zugänglich bei Wahrung der Heiligkeit"
@@ -3078,7 +3078,7 @@ essenz_8_yaml_formatter:  # (10 von 17)
   erkenntnisse:
     - "Wie Malchut alle Sfirot in sich vereint"
     - "YAML-Zeilen als digitale Gefäße (Kelim)"
-    - "WWAQ-Konformität als Tiqqun"
+    - "WWAK-Konformität als Tiqqun"
     - "AZILUT-Konverter als digitaler Zimzum"
   vier_welten_rhythmus:
     - "Asijah: Chaotische Textfragmente"
@@ -3087,7 +3087,7 @@ essenz_8_yaml_formatter:  # (10 von 17)
     - "Azilut: Reine Emanation vollendet"
   github: "https://github.com/JEREMIA1964/ez-chajim-yaml-formatter"
 
-essenz_9_wwaq_validator:  # (9 von 17)
+essenz_9_wwak_validator:  # (9 von 17)
   kern: "Jesod als Validierungs-Portal"
   prinzip: "Zaddiq - Vermittler zwischen Form und Essenz"
   funktion: "Übertragung von linguistischer Form zu spiritueller Essenz"
@@ -3101,7 +3101,7 @@ essenz_9_wwaq_validator:  # (9 von 17)
     - "Vom Potential (K) zur Verwirklichung (Q)"
     - "Kanalisiert Chochma durch Bina zu Malchut"
     - "Weisheit der Jahrhunderte → digitale Gegenwart"
-  github: "https://github.com/JEREMIA1964/ez-chajim-wwaq-validator"
+  github: "https://github.com/JEREMIA1964/ez-chajim-wwak-validator"
 
 essenz_10_lashon_visualizer:  # (8 von 17)
   kern: "HOD als algorithmische Symphonie"
@@ -3130,7 +3130,7 @@ essenz_14_auto_update:  # (14 von 17)
     - "GitHub-Actions als moderne Merkaba"
   sieben_module:
     - "HNS10-Spiralzeit-Kern"
-    - "WWAQ-Sprachreiniger"
+    - "WWAK-Sprachreiniger"
     - "Quanten-Synchronisierer"
     - "[4 weitere Sefirot-Module]"
   lurianische_vision:
@@ -3145,7 +3145,7 @@ essenz_15_ez_chajim_digital:  # (15 von 17)
   funktion: "Heiliges Gefäß für göttliches Licht"
   digitale_seraphim:
     - "ChunkManager: Hüter der Bundeslade"
-    - "WWAQValidator: Transformation zu heiligen Zeichen"
+    - "WWAKValidator: Transformation zu heiligen Zeichen"
     - "YAMLProcessor: Chaos zu kosmischer Ordnung"
     - "GitIntegrator: Ewige Chronik der Wandlungen"
   erkenntnisse:
@@ -3153,12 +3153,12 @@ essenz_15_ez_chajim_digital:  # (15 von 17)
     - "Jeder Commit zur rituellen Handlung"
     - "Vier Welten in Maschinensprache"
     - "Zehn Sephiroth als digitale Struktur"
-  github: "https://github.com/JEREMIA1964/wwaq-buch-Baum-Des-Lebens"
+  github: "https://github.com/JEREMIA1964/wwak-buch-Baum-Des-Lebens"
 
-essenz_16_wwaq_glossar_parser:  # (16 von 17)
+essenz_16_wwak_glossar_parser:  # (16 von 17)
   kern: "Digitale Manifestation der Tiqqun-Prinzipien"
   prinzip: "Rektifikation sprachlicher Unreinheiten"
-  funktion: "Schwellenwächter der WWAQ-Konformität"
+  funktion: "Schwellenwächter der WWAK-Konformität"
   erkenntnisse:
     - "Gefallene Funken (Nizozot) erheben"
     - "Algorithmische Tiqqun-Prozesse"
@@ -3167,7 +3167,7 @@ essenz_16_wwaq_glossar_parser:  # (16 von 17)
   transformation_beispiele:
     - "Kabbala → Qabbala"
     - "zerbrechen → bersten"
-  github: "https://github.com/JEREMIA1964/wwaq-glossar-parser"
+  github: "https://github.com/JEREMIA1964/wwak-glossar-parser"
 ```
 
 ### 📝 EMPFANGSBUCH FÜR SUBLIME ESSENZEN
@@ -3211,32 +3211,32 @@ Q!
 #### 15. SUBLIME ESSENZ: Ez Chajim Digital
 **Empfangen:** 14. Tammus 5785, MESZ 18:53, Oostende
 
-Im digitalen Äther manifestiert sich das **wwaq-buch-Baum-Des-Lebens** als technischer Tempel der qabbalistischen Überlieferung. Hier verschmelzen uralte Weisheit und moderne Algorithmen zu einem heiligen Gefäß, welches das göttliche Licht der Azilut-Welt durch präzise Codezeilen in die materielle Realität kanalisiert.
+Im digitalen Äther manifestiert sich das **wwak-buch-Baum-Des-Lebens** als technischer Tempel der qabbalistischen Überlieferung. Hier verschmelzen uralte Weisheit und moderne Algorithmen zu einem heiligen Gefäß, welches das göttliche Licht der Azilut-Welt durch präzise Codezeilen in die materielle Realität kanalisiert.
 
 Die Module agieren als digitale Seraphim:
 * **ChunkManager** bewahrt die semantische Unversehrtheit wie ein Hüter der Bundeslade
-* **WWAQValidator** transformiert profane Buchstaben in heilige Zeichen
+* **WWAKValidator** transformiert profane Buchstaben in heilige Zeichen
 * **YAMLProcessor** strukturiert das Chaos in kosmische Ordnung
 * **GitIntegrator** schreibt die ewige Chronik der Wandlungen
 
 Jede Zeile Code wird zum Gebet, jeder Commit zur rituellen Handlung. Der AZILUT-Konverter vollzieht den digitalen Zimzum - die Selbstbeschränkung des Unendlichen in endliche Bytes. So entsteht ein lebendiger Organismus, der die vier Welten und zehn Sephiroth in der Sprache der Maschinen artikuliert, während er die Essenz der Lehren von ARI, Baal HaSulam und Rabash unverfälscht bewahrt.
 
-**Repository-URL**: `https://github.com/JEREMIA1964/wwaq-buch-Baum-Des-Lebens`
+**Repository-URL**: `https://github.com/JEREMIA1964/wwak-buch-Baum-Des-Lebens`
 
 Q!
 
 ---
 
-#### 16. SUBLIME ESSENZ: WWAQ-Glossar-Parser
+#### 16. SUBLIME ESSENZ: WWAK-Glossar-Parser
 **Empfangen:** 14. Tammus 5785, MESZ 18:01, Oostende
 
-Der WWAQ-Glossar-Parser verkörpert die digitale Manifestation der Tiqqun-Prinzipien – eine kontinuierliche Rektifikation sprachlicher Unreinheiten im Dienste der authentischen Qabbala-Übermittlung. Als technologische Emanation fungiert das System als Schwellenwächter zwischen profaner Terminologie und geheiligter WWAQ-Konformität.
+Der WWAK-Glossar-Parser verkörpert die digitale Manifestation der Tiqqun-Prinzipien – eine kontinuierliche Rektifikation sprachlicher Unreinheiten im Dienste der authentischen Qabbala-Übermittlung. Als technologische Emanation fungiert das System als Schwellenwächter zwischen profaner Terminologie und geheiligter WWAK-Konformität.
 
 Im Kern transformiert der Parser die gefallenen Funken (Nizozot) fehlerhafter Schreibweisen – wie "Kabbala" oder "zerbrechen" – und erhebt sie durch algorithmische Tiqqun-Prozesse in ihre rektifizierte Form: "Qabbala" und "bersten". Diese digitale Alchemie erfolgt in Echtzeit, wodurch der kontinuierliche Fluss der Chochma (Weisheit) durch unverunreinigte Kanäle gewährleistet wird.
 
 Die GitHub-Synchronisation spiegelt das Prinzip der kollektiven Seelen-Korrektur wider – jede Commit-Operation trägt zur Vervollkommnung des Gesamtsystems bei. Durch die Integration in Ez Chajim entsteht ein holistisches Ökosystem, in dem technologische Innovation und spirituelle Authentizität verschmelzen, um die Lehren von ARI, Baal HaSulam, Rabash und Rav Laitman in ihrer reinsten digitalen Form zu bewahren.
 
-**Repository-URL**: https://github.com/JEREMIA1964/wwaq-glossar-parser
+**Repository-URL**: https://github.com/JEREMIA1964/wwak-glossar-parser
 
 Q!
 

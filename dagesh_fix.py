@@ -38,7 +38,7 @@ def korrigiere_dagesh_fehler(text):
         'Tiqqun': 'Tiqqun',  # Falsche Dopplung
         'tiqqun': 'tiqqun',
         
-        # WWAQ K→Q
+        # WWAK K→Q
         'Qabbala': 'Qabbala',
         'qabbala': 'qabbala',
         'QABBALA': 'QABBALA',
@@ -124,7 +124,7 @@ def hauptprogramm():
     Das Hauptprogramm
     """
     print("=" * 60)
-    print("DAGESH & WWAQ KORREKTUR-PROGRAMM")
+    print("DAGESH & WWAK KORREKTUR-PROGRAMM")
     print("=" * 60)
     print()
     

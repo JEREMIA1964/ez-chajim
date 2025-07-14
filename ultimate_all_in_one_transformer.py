@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-🌟 ULTIMATE ALL-IN-ONE WWAQ TRANSFORMER 🌟
+🌟 ULTIMATE ALL-IN-ONE WWAK TRANSFORMER 🌟
 ==========================================
 Alle Komponenten in EINER Datei!
 Stand: 10. Tammus 5785
@@ -23,8 +23,8 @@ class SchewiraParadigma:
             result = result.replace(alt, neu)
         return result
 
-class StandardWWAQ:
-    """Standard WWAQ Transformationen"""
+class StandardWWAK:
+    """Standard WWAK Transformationen"""
     def __init__(self):
         self.trans = {
             'wandeln': 'wandeln',
@@ -43,7 +43,7 @@ class UltimateTransformer:
     """Der Ultimate All-in-One Transformer"""
     def __init__(self):
         self.schewira = SchewiraParadigma()
-        self.standard = StandardWWAQ()
+        self.standard = StandardWWAK()
     
     def transformiere(self, text):
         print(f"\n📝 Original: {text}")
@@ -53,14 +53,14 @@ class UltimateTransformer:
         print(f"🔯 Nach Schewirat: {text}")
         
         text = self.standard.transformiere(text)
-        print(f"✅ Final WWAQ: {text}")
+        print(f"✅ Final WWAK: {text}")
         
         return text
 
 # HAUPTPROGRAMM
 if __name__ == "__main__":
     print("═" * 60)
-    print("🌟 ULTIMATE ALL-IN-ONE WWAQ TRANSFORMER 🌟")
+    print("🌟 ULTIMATE ALL-IN-ONE WWAK TRANSFORMER 🌟")
     print("═" * 60)
     
     transformer = UltimateTransformer()

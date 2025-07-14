@@ -23,13 +23,13 @@ Diese Dokumentation übergibt die vollständigen Ez Chajim Module an die Entwick
 
 ## Module-Übersicht (ERWEITERT)
 
-### 1. WWAQ Buchstaben-Lehre Kernmodul (`wwaq_buchstaben_lehre.py`)
+### 1. WWAK Buchstaben-Lehre Kernmodul (`wwak_buchstaben_lehre.py`)
 
-**Zweck**: Sicherstellt korrekte WWAQ-konforme Schreibweise  
+**Zweck**: Sicherstellt korrekte WWAK-konforme Schreibweise  
 **Kritisch**: Falsche Buchstaben = Licht fließt zu Qlipot!
 
 **Hauptfunktionen**:
-- `check_text()`: Prüft Text auf WWAQ-Verstöße
+- `check_text()`: Prüft Text auf WWAK-Verstöße
 - `correct_text()`: Automatische Korrektur
 - `generate_report()`: Detaillierter Verstoß-Bericht
 
@@ -86,7 +86,7 @@ Diese Dokumentation übergibt die vollständigen Ez Chajim Module an die Entwick
 ## Implementierungs-Prioritäten (AKTUALISIERT)
 
 ### Phase 1: Kernfunktionalität (Woche 1-2)
-1. WWAQ Buchstaben-Lehre implementieren
+1. WWAK Buchstaben-Lehre implementieren
 2. Basis-Tests für alle Verstöße
 3. Integration in bestehende Textverarbeitung
 
@@ -129,7 +129,7 @@ random
 ez-chajim/
 ├── core/
 │   ├── ein_sof_principles.py
-│   ├── wwaq_rules.py
+│   ├── wwak_rules.py
 │   ├── integrity_checker.py
 │   └── transliteration.py
 ├── adam_kadmon/
@@ -157,7 +157,7 @@ ez-chajim/
 │   ├── fifty_gates_binah.json
 │   └── qabbala_system_table.yaml
 ├── tests/
-│   ├── test_wwaq_compliance.py
+│   ├── test_wwak_compliance.py
 │   ├── test_masculine_kli.py
 │   ├── test_nukwa_activation.py
 │   └── test_world_traversal.py
@@ -177,7 +177,7 @@ ez-chajim/
 - Score < 0.7 = Warnung + Auto-Korrektur
 - Keine Kompromisse bei Gottesnamen und Qabbala
 
-### 2. WWAQ-Konformität
+### 2. WWAK-Konformität
 - Falsche Schreibweise = Licht zu Qlipot (GEFAHR!)
 - Automatische Korrektur IMMER aktiv
 - Quartalsbericht über Verstöße
@@ -200,14 +200,14 @@ Von der Eingangstür bis zum Kaffeestand - überall Qabbala!
 So ist es! Keter Kitrei HaKetarim!"
 ```
 
-### Szenario 2: WWAQ Verstoß
+### Szenario 2: WWAK Verstoß
 ```python
 # Input
 "Die qabbalistische Qrone der kabala"
 
 # Expected Output
 "Die kabbalistische Krone der Qabbala"
-# + Warnung: "3 kritische WWAQ-Verstöße korrigiert"
+# + Warnung: "3 kritische WWAK-Verstöße korrigiert"
 ```
 
 ### Szenario 3: Nukwa Aktivierung
@@ -242,7 +242,7 @@ Durch alle Welten aufgestiegen und mit Licht zurückgekehrt!"
    - Ziel: > 0.85
    - Alarm bei: < 0.6
 
-2. **WWAQ Compliance Rate**
+2. **WWAK Compliance Rate**
    - Ziel: 100%
    - Akzeptabel: > 98%
 

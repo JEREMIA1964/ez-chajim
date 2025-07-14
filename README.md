@@ -1,5 +1,5 @@
 #Ez Chajim - Digitaler Lebensbaum Stand: 14. Tammus 5785
-Ein WWAQ-konformes System zur Integration qabbalistischer Weisheit.
+Ein WWAK-konformes System zur Integration qabbalistischer Weisheit.
 
 ## 🙏 Besondere Widmung
 

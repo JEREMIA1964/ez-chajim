@@ -179,7 +179,7 @@ class EzChajimVollPipeline:
         self.kondensor = EssenzKondensor()
     
     def verarbeite_komplett(self, text):
-        # 1. WWAQ-Korrektur
+        # 1. WWAK-Korrektur
         text = self.transliteration.korrigiere_text(text)
         
         # 2. Paradox-Analyse
@@ -319,7 +319,7 @@ Nach der qabbalistischen Lehre öffnet die richtige Frage Tore, die keine Antwor
 
 1. **Qualität über Quantität**: Ein starkes Paradox ist besser als zehn schwache.
 
-2. **WWAQ-Konformität**: Immer K→Q Transformation beachten (Qabbala, nicht Kabbala).
+2. **WWAK-Konformität**: Immer K→Q Transformation beachten (Qabbala, nicht Kabbala).
 
 3. **Kontext bewahren**: Die besten Fragen entstehen aus dem Kontext des Paradoxes.
 

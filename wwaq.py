@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Ez Chajim WWAQ Smart Launcher
+Ez Chajim WWAK Smart Launcher
 ============================
 Intelligenter Launcher für das Ez Chajim System
 
@@ -9,11 +9,11 @@ Stand: 5. Tammus 5785
 Autor: JEREMIA1964
 
 Verwendung:
-    ./wwaq.py check              # System-Gesundheitsprüfung
-    ./wwaq.py validate <datei>   # WWAQ-Validierung
-    ./wwaq.py process <datei>    # Manuskript verarbeiten
-    ./wwaq.py init               # Projekt initialisieren
-    ./wwaq.py spiral             # Aktuelle Spiralzeit
+    ./wwak.py check              # System-Gesundheitsprüfung
+    ./wwak.py validate <datei>   # WWAK-Validierung
+    ./wwak.py process <datei>    # Manuskript verarbeiten
+    ./wwak.py init               # Projekt initialisieren
+    ./wwak.py spiral             # Aktuelle Spiralzeit
 """
 
 import sys
@@ -33,8 +33,8 @@ sys.path.insert(0, str(PROJECT_ROOT))
 try:
     from __init__ import (
         get_ez_chajim_instance,
-        validate_wwaq,
-        transform_wwaq,
+        validate_wwak,
+        transform_wwak,
         get_spiral_time,
         __version__
     )
@@ -60,7 +60,7 @@ def print_header():
     """Zeige Ez Chajim Header"""
     header = f"""
 {Colors.CYAN}╔═══════════════════════════════════════════════════════════════╗
-║                   {Colors.BOLD}Ez Chajim WWAQ System{Colors.ENDC}{Colors.CYAN}                        ║
+║                   {Colors.BOLD}Ez Chajim WWAK System{Colors.ENDC}{Colors.CYAN}                        ║
 ║                      Version: {__version__ if MODULES_LOADED else 'N/A'}                          ║
 ║                  {Colors.YELLOW}עץ חיים - Baum des Lebens{Colors.CYAN}                    ║
 ╚═══════════════════════════════════════════════════════════════╝{Colors.ENDC}
@@ -82,7 +82,7 @@ def print_status(message: str, status: str = "info"):
 @click.group()
 @click.version_option(version=__version__ if MODULES_LOADED else "N/A")
 def cli():
-    """Ez Chajim WWAQ Smart Launcher"""
+    """Ez Chajim WWAK Smart Launcher"""
     pass
 
 @cli.command()
@@ -134,7 +134,7 @@ def check():
 @cli.command()
 @click.argument('file', type=click.Path(exists=True))
 def validate(file):
-    """Validiere Datei auf WWAQ-Konformität"""
+    """Validiere Datei auf WWAK-Konformität"""
     print_header()
     print_status(f"Validiere Datei: {file}", "working")
     
@@ -148,12 +148,12 @@ def validate(file):
             content = f.read()
         
         # Validiere
-        is_valid, errors = validate_wwaq(content)
+        is_valid, errors = validate_wwak(content)
         
         if is_valid:
-            print_status("Datei ist WWAQ-konform!", "success")
+            print_status("Datei ist WWAK-konform!", "success")
         else:
-            print_status(f"Datei enthält {len(errors)} WWAQ-Verstöße:", "error")
+            print_status(f"Datei enthält {len(errors)} WWAK-Verstöße:", "error")
             for error in errors:
                 print(f"  {Colors.RED}•{Colors.ENDC} {error}")
         
@@ -235,9 +235,9 @@ def init():
     
     # Erstelle Beispiel-Konfiguration
     config = {
-        'project': 'Ez Chajim WWAQ',
+        'project': 'Ez Chajim WWAK',
         'version': __version__ if MODULES_LOADED else '5785.5.5',
-        'wwaq': {
+        'wwak': {
             'validation': True,
             'transformations': {
                 'K': 'Q',
@@ -259,7 +259,7 @@ def init():
         print_status("Konfiguration erstellt: ez-chajim-config.yaml", "success")
     
     # Erstelle README
-    readme_content = f"""# Ez Chajim WWAQ Projekt
+    readme_content = f"""# Ez Chajim WWAK Projekt
 
 Stand: {datetime.now().strftime('%d.%m.%Y')}
 
@@ -276,18 +276,18 @@ Stand: {datetime.now().strftime('%d.%m.%Y')}
 
 ```bash
 # System-Check
-./wwaq.py check
+./wwak.py check
 
 # Datei validieren
-./wwaq.py validate manuscript.txt
+./wwak.py validate manuscript.txt
 
 # Manuskript verarbeiten
-./wwaq.py process manuscript.txt -o output.yaml
+./wwak.py process manuscript.txt -o output.yaml
 ```
 
-## WWAQ-Konformität
+## WWAK-Konformität
 
-Dieses Projekt folgt den WWAQ-Richtlinien:
+Dieses Projekt folgt den WWAK-Richtlinien:
 - K→Q Transformation (Qabbala statt Kabbala)
 - Zer-Elimination
 - DIN 31636 Transliteration
@@ -304,7 +304,7 @@ Q!
     print(f"\n{Colors.GREEN}Projekt initialisiert! Q!{Colors.ENDC}")
     print_status("Nächste Schritte:", "info")
     print("  1. Kopiere die Bibliotheksdateien nach lib/")
-    print("  2. Führe './wwaq.py check' aus")
+    print("  2. Führe './wwak.py check' aus")
     print("  3. Beginne mit der Manuskript-Verarbeitung")
 
 @cli.command()
@@ -341,20 +341,20 @@ def spiral():
 @cli.command()
 @click.argument('text')
 def transform(text):
-    """Transformiere Text in WWAQ-konforme Form"""
+    """Transformiere Text in WWAK-konforme Form"""
     if not MODULES_LOADED:
         print_status("Module nicht geladen - Transformation nicht möglich", "error")
         sys.exit(1)
     
     try:
-        result = transform_wwaq(text)
+        result = transform_wwak(text)
         print(f"{Colors.BOLD}Original:{Colors.ENDC} {text}")
-        print(f"{Colors.BOLD}WWAQ:{Colors.ENDC} {result}")
+        print(f"{Colors.BOLD}WWAK:{Colors.ENDC} {result}")
         
         if text != result:
             print_status("Text wurde transformiert", "success")
         else:
-            print_status("Text war bereits WWAQ-konform", "info")
+            print_status("Text war bereits WWAK-konform", "info")
             
     except Exception as e:
         print_status(f"Fehler bei Transformation: {e}", "error")

@@ -45,8 +45,8 @@ class HebrewProcessor:
             'ת': 't'      # Taw
         }
         
-        # WWAQ-Transformationen
-        self.wwaq = {
+        # WWAK-Transformationen
+        self.wwak = {
             'qabbala': 'qabbala',
             'qawana': 'qawana',
             'qelim': 'qelim',
@@ -77,8 +77,8 @@ class HebrewProcessor:
         # Text zusammenfügen
         umschrift = ''.join(result)
         
-        # WWAQ anwenden
-        for alt, neu in self.wwaq.items():
+        # WWAK anwenden
+        for alt, neu in self.wwak.items():
             umschrift = re.sub(f'\\b{alt}\\b', neu, umschrift, flags=re.I)
         
         # Erster Buchstabe groß
@@ -164,7 +164,7 @@ def main():
                 ('חסד', 'Chessed (mit SS!)'),
                 ('זהר', 'Sohar (NICHT Zohar!)'),
                 ('צדיק', 'Zaddik (NICHT Tzaddik!)'),
-                ('קבלה', 'Qabbala (WWAQ!)'),
+                ('קבלה', 'Qabbala (WWAK!)'),
                 ('חסרון', 'Chissaron (Doppel-S!)'),
                 ('ציצית', 'Zizit (NICHT Tzitzit!)')
             ]

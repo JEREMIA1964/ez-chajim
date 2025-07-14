@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Ez Chajim WWAQ - Haupt-Init-Modul
+Ez Chajim WWAK - Haupt-Init-Modul
 ================================
-WWAQ-konforme Initialisierung des Ez Chajim Systems
+WWAK-konforme Initialisierung des Ez Chajim Systems
 
 Stand: 5. Tammus 5785
 Autor: JEREMIA1964
-Lizenz: WWAQ-konform (siehe LICENSE)
+Lizenz: WWAK-konform (siehe LICENSE)
 
 Dieses Modul initialisiert das Ez Chajim System mit:
 - HNS10 Spiralsystem (mit Null-Linien-Tabu)
-- WWAQ-Validierung (K→Q, Zer-Elimination)
+- WWAK-Validierung (K→Q, Zer-Elimination)
 - Drei-Kalender-Integration
 - Manuskript-Verarbeitung mit Gematria
 """
@@ -23,10 +23,10 @@ from datetime import datetime
 import logging
 from typing import Dict, List, Optional, Tuple
 
-# WWAQ-konforme Version
+# WWAK-konforme Version
 __version__ = "5785.5.5"  # Jahr.Monat.Tag im hebräischen Kalender
 __author__ = "JEREMIA1964"
-__wwaq_status__ = "KONFORME_AUSGABE"
+__wwak_status__ = "KONFORME_AUSGABE"
 
 # Füge lib-Verzeichnis zum Python-Pfad hinzu
 LIB_PATH = Path(__file__).parent / 'lib'
@@ -40,10 +40,10 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S MESZ'
 )
 
-logger = logging.getLogger('ez_chajim_wwaq')
+logger = logging.getLogger('ez_chajim_wwak')
 
-# WWAQ-Konstanten
-WWAQ_MAPPINGS = {
+# WWAK-Konstanten
+WWAK_MAPPINGS = {
     'K': 'Q',  # Kabbala → Qabbala
     'k': 'q',  # kawana → qawana
     'zer': '',  # Zer-Elimination
@@ -74,12 +74,12 @@ PROJECT_DIRS = {
     'logs': Path('logs')
 }
 
-class EzChajimWWAQ:
-    """Haupt-Klasse für Ez Chajim WWAQ System"""
+class EzChajimWWAK:
+    """Haupt-Klasse für Ez Chajim WWAK System"""
     
     def __init__(self, base_path: Optional[Path] = None):
         """
-        Initialisiere Ez Chajim WWAQ System
+        Initialisiere Ez Chajim WWAK System
         
         Args:
             base_path: Basis-Pfad für das Projekt (Standard: aktuelles Verzeichnis)
@@ -88,7 +88,7 @@ class EzChajimWWAQ:
         self.components = {}
         self._initialized = False
         
-        logger.info(f"Initialisiere Ez Chajim WWAQ in: {self.base_path}")
+        logger.info(f"Initialisiere Ez Chajim WWAK in: {self.base_path}")
         
         # Erstelle Projekt-Verzeichnisse
         self._create_project_dirs()
@@ -96,11 +96,11 @@ class EzChajimWWAQ:
         # Lade Komponenten
         self._load_components()
         
-        # WWAQ-Validierung aktivieren
-        self._enable_wwaq_validation()
+        # WWAK-Validierung aktivieren
+        self._enable_wwak_validation()
         
         self._initialized = True
-        logger.info("Ez Chajim WWAQ erfolgreich initialisiert! Q!")
+        logger.info("Ez Chajim WWAK erfolgreich initialisiert! Q!")
     
     def _create_project_dirs(self):
         """Erstelle notwendige Projekt-Verzeichnisse"""
@@ -135,19 +135,19 @@ class EzChajimWWAQ:
             logger.warning("Stelle sicher, dass alle Bibliotheksdateien im lib/ Verzeichnis sind!")
             raise
     
-    def _enable_wwaq_validation(self):
-        """Aktiviere WWAQ-Validierung für alle Komponenten"""
-        logger.info("Aktiviere WWAQ-Validierung...")
+    def _enable_wwak_validation(self):
+        """Aktiviere WWAK-Validierung für alle Komponenten"""
+        logger.info("Aktiviere WWAK-Validierung...")
         
-        # Setze WWAQ-Modus in allen Komponenten
+        # Setze WWAK-Modus in allen Komponenten
         for name, component in self.components.items():
-            if hasattr(component, 'set_wwaq_mode'):
-                component.set_wwaq_mode(True)
-                logger.debug(f"WWAQ-Modus aktiviert für: {name}")
+            if hasattr(component, 'set_wwak_mode'):
+                component.set_wwak_mode(True)
+                logger.debug(f"WWAK-Modus aktiviert für: {name}")
     
     def validate_text(self, text: str) -> Tuple[bool, List[str]]:
         """
-        Validiere Text auf WWAQ-Konformität
+        Validiere Text auf WWAK-Konformität
         
         Args:
             text: Zu validierender Text
@@ -175,20 +175,20 @@ class EzChajimWWAQ:
         is_valid = len(errors) == 0
         return is_valid, errors
     
-    def transform_to_wwaq(self, text: str) -> str:
+    def transform_to_wwak(self, text: str) -> str:
         """
-        Transformiere Text in WWAQ-konforme Form
+        Transformiere Text in WWAK-konforme Form
         
         Args:
             text: Zu transformierender Text
             
         Returns:
-            WWAQ-konformer Text
+            WWAK-konformer Text
         """
         result = text
         
-        # Anwende WWAQ-Mappings
-        for old, new in WWAQ_MAPPINGS.items():
+        # Anwende WWAK-Mappings
+        for old, new in WWAK_MAPPINGS.items():
             result = result.replace(old, new)
         
         # Spezielle Transformationen
@@ -237,8 +237,8 @@ class EzChajimWWAQ:
         with open(manuscript_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # WWAQ-Transformation
-        content = self.transform_to_wwaq(content)
+        # WWAK-Transformation
+        content = self.transform_to_wwak(content)
         
         # Verarbeite mit Manuskript-Prozessor
         result = self.components['manuscript'].process(content)
@@ -246,7 +246,7 @@ class EzChajimWWAQ:
         # Füge Metadaten hinzu
         result['metadata'] = {
             'spiral_time': self.get_spiral_time(),
-            'wwaq_validated': True,
+            'wwak_validated': True,
             'source_file': str(manuscript_path)
         }
         
@@ -254,7 +254,7 @@ class EzChajimWWAQ:
     
     def format_to_yaml(self, data: Dict) -> str:
         """
-        Formatiere Daten als WWAQ-konformes YAML
+        Formatiere Daten als WWAK-konformes YAML
         
         Args:
             data: Zu formatierende Daten
@@ -296,7 +296,7 @@ class EzChajimWWAQ:
     def __repr__(self) -> str:
         """String-Repräsentation"""
         return (
-            f"EzChajimWWAQ(version={__version__}, "
+            f"EzChajimWWAK(version={__version__}, "
             f"base_path={self.base_path}, "
             f"components={list(self.components.keys())})"
         )
@@ -304,31 +304,31 @@ class EzChajimWWAQ:
 # Singleton-Instanz
 _instance = None
 
-def get_ez_chajim_instance(base_path: Optional[Path] = None) -> EzChajimWWAQ:
+def get_ez_chajim_instance(base_path: Optional[Path] = None) -> EzChajimWWAK:
     """
-    Hole Ez Chajim WWAQ Singleton-Instanz
+    Hole Ez Chajim WWAK Singleton-Instanz
     
     Args:
         base_path: Basis-Pfad für das Projekt
         
     Returns:
-        EzChajimWWAQ Instanz
+        EzChajimWWAK Instanz
     """
     global _instance
     if _instance is None:
-        _instance = EzChajimWWAQ(base_path)
+        _instance = EzChajimWWAK(base_path)
     return _instance
 
 # Convenience-Funktionen für direkten Import
-def validate_wwaq(text: str) -> Tuple[bool, List[str]]:
-    """Validiere Text auf WWAQ-Konformität"""
+def validate_wwak(text: str) -> Tuple[bool, List[str]]:
+    """Validiere Text auf WWAK-Konformität"""
     instance = get_ez_chajim_instance()
     return instance.validate_text(text)
 
-def transform_wwaq(text: str) -> str:
-    """Transformiere Text in WWAQ-konforme Form"""
+def transform_wwak(text: str) -> str:
+    """Transformiere Text in WWAK-konforme Form"""
     instance = get_ez_chajim_instance()
-    return instance.transform_to_wwaq(text)
+    return instance.transform_to_wwak(text)
 
 def get_spiral_time() -> str:
     """Hole aktuelle Spiralzeit"""
@@ -337,18 +337,18 @@ def get_spiral_time() -> str:
 
 # Export-Liste
 __all__ = [
-    'EzChajimWWAQ',
+    'EzChajimWWAK',
     'get_ez_chajim_instance',
-    'validate_wwaq',
-    'transform_wwaq',
+    'validate_wwak',
+    'transform_wwak',
     'get_spiral_time',
     '__version__',
     '__author__',
-    '__wwaq_status__'
+    '__wwak_status__'
 ]
 
 # Initialisierungs-Nachricht
 if __name__ != '__main__':
-    logger.info(f"Ez Chajim WWAQ Modul geladen - Version {__version__}")
+    logger.info(f"Ez Chajim WWAK Modul geladen - Version {__version__}")
     logger.info("Verwende get_ez_chajim_instance() für Zugriff")
     logger.info("Q!")

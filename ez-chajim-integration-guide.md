@@ -31,7 +31,7 @@ transliteration_config:
     Jessod: Jessod
     Tiqqun: Tiqqun
     
-  # WWAQ K→Q
+  # WWAK K→Q
   k_zu_q:
     Qabbala: Qabbala
     Qawana: Qawana
@@ -95,7 +95,7 @@ def process(self, text: str, context: Optional[Dict] = None):
 
 # Wrapper-Funktion für alle Text-Eingänge
 def _prepare_text(self, text: str) -> str:
-    """Bereitet Text vor: WWAQ + Dagesh-Korrekturen"""
+    """Bereitet Text vor: WWAK + Dagesh-Korrekturen"""
     try:
         from modules.transliteration import korrigiere_text
         return korrigiere_text(text)
@@ -220,7 +220,7 @@ class TestTransliterationIntegration:
         assert korrigiere_text("Chessed") == "Chessed"
         assert korrigiere_text("Nezach") == "Nezach"  # Keine Änderung!
     
-    def test_wwaq_transformation(self):
+    def test_wwak_transformation(self):
         """Testet K→Q Regeln"""
         assert korrigiere_text("Qabbala") == "Qabbala"
         assert korrigiere_text("Die Qawana") == "Die Qawana"
