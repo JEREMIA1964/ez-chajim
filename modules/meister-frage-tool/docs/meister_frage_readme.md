@@ -319,7 +319,7 @@ Nach der qabbalistischen Lehre öffnet die richtige Frage Tore, die keine Antwor
 
 1. **Qualität über Quantität**: Ein starkes Paradox ist besser als zehn schwache.
 
-2. **WWAK-Konformität**: Immer K→Q Transformation beachten (Qabbala, nicht Kabbala).
+2. **WWAK-Konformität**: Immer K→Q Transformation beachten (Kabbala, nicht Kabbala).
 
 3. **Kontext bewahren**: Die besten Fragen entstehen aus dem Kontext des Paradoxes.
 

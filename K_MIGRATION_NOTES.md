@@ -2,9 +2,9 @@
 Stand: 18. Tammus 5785, MESZ 05:40
 
 ## Durchgeführte Änderungen:
-- WWAQ → WWAK
-- Qabbala → Kabbala
-- Qawana → Kawana
+- WWAK → WWAK
+- Kabbala → Kabbala
+- Kawana → Kawana
 - Qli → Kli
 
 ## Begründung:

@@ -6,7 +6,7 @@
 den Mangel sah und rief: 'להופיע אותה/אותו'"
 
 ## Ihre drei Botschaften:
-1. Es fehlt Qabbala und Höhere Kraft
+1. Es fehlt Kabbala und Höhere Kraft
 2. Lasst sie erscheinen!  
 3. So ist es! Keter Kitrei HaKetarim!
 

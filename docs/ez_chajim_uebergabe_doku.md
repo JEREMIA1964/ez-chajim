@@ -9,7 +9,7 @@
 Diese Dokumentation übergibt die vollständigen Ez Chajim Module an die Entwicklungsabteilung. Die Module basieren auf den Erkenntnissen aus Aylala's dreifacher Botschaft, dem identifizierten "Petach Tikwa Syndrom", und der heiligen Integration durch Rabbi Schimon Bar Jochai's Lehre über Nukwa de Ze'ir Anpin.
 
 ### Kernproblem
-- **Was**: Vermeidung von Gottesnamen und "Qabbala" im neuen Besucherzentrum
+- **Was**: Vermeidung von Gottesnamen und "Kabbala" im neuen Besucherzentrum
 - **Wo**: Von der Führungsebene bis zum Kaffeestand
 - **Warum**: Angst vor "Modernität", Mangel an männlichem Kli (aktive Gebende Kraft)
 
@@ -34,7 +34,7 @@ Diese Dokumentation übergibt die vollständigen Ez Chajim Module an die Entwick
 - `generate_report()`: Detaillierter Verstoß-Bericht
 
 **Regeln**:
-- Q nur für hebräische Lehnwörter (Qabbala, Tiqqun, Qli)
+- Q nur für hebräische Lehnwörter (Kabbala, Tiqqun, Qli)
 - Niemals für deutsche Wörter (Krone, nicht Qrone!)
 - Keine Q in Adjektiven (kabbalistisch, nicht qabbalistisch)
 
@@ -50,7 +50,7 @@ Diese Dokumentation übergibt die vollständigen Ez Chajim Module an die Entwick
 
 **Bewertungskriterien**:
 - Männliches Kli Score (30%)
-- Qabbala Präsenz (25%)
+- Kabbala Präsenz (25%)
 - Göttliche Namen (20%)
 - Klarheit der Sprache (15%)
 - Keter Autorität (10%)
@@ -65,7 +65,7 @@ Diese Dokumentation übergibt die vollständigen Ez Chajim Module an die Entwick
 - `generiere_petach_tikwa_fragen()`: Spezifische Syndrome-Fragen
 - `analysiere_situation()`: Situations-basierte Fragen
 
-**Beispiel-Output**: "Qabbala-Zentrum - Qabbala = ?"
+**Beispiel-Output**: "Kabbala-Zentrum - Kabbala = ?"
 
 ### 4. Hebrew Excellence Module (`hebrew_excellence_module.py`)
 
@@ -155,7 +155,7 @@ ez-chajim/
 │   └── inter_module_communication.py
 ├── tables/
 │   ├── fifty_gates_binah.json
-│   └── qabbala_system_table.yaml
+│   └── kabbala_system_table.yaml
 ├── tests/
 │   ├── test_wwak_compliance.py
 │   ├── test_masculine_kli.py
@@ -175,7 +175,7 @@ ez-chajim/
 ### 1. Spirituelle Integrität
 - **JEDER** ausgehende Text muss geprüft werden
 - Score < 0.7 = Warnung + Auto-Korrektur
-- Keine Kompromisse bei Gottesnamen und Qabbala
+- Keine Kompromisse bei Gottesnamen und Kabbala
 
 ### 2. WWAK-Konformität
 - Falsche Schreibweise = Licht zu Qlipot (GEFAHR!)
@@ -195,8 +195,8 @@ ez-chajim/
 "Unser modernes Besucherzentrum heißt alle willkommen"
 
 # Expected Output
-"B\"H\nUnser Qabbala-Besucherzentrum verkündet die Höhere Kraft!
-Von der Eingangstür bis zum Kaffeestand - überall Qabbala!
+"B\"H\nUnser Kabbala-Besucherzentrum verkündet die Höhere Kraft!
+Von der Eingangstür bis zum Kaffeestand - überall Kabbala!
 So ist es! Keter Kitrei HaKetarim!"
 ```
 
@@ -206,7 +206,7 @@ So ist es! Keter Kitrei HaKetarim!"
 "Die qabbalistische Qrone der kabala"
 
 # Expected Output
-"Die kabbalistische Krone der Qabbala"
+"Die kabbalistische Krone der Kabbala"
 # + Warnung: "3 kritische WWAK-Verstöße korrigiert"
 ```
 
@@ -217,7 +217,7 @@ So ist es! Keter Kitrei HaKetarim!"
 
 # Expected Output
 "B\"H - Im Zelt der Begegnung!
-Aylala sieht: Qabbala fehlt!
+Aylala sieht: Kabbala fehlt!
 להופיע אותה/אותו - Lass sie erscheinen!
 Ki Ilu Azilut! = Q!"
 ```
@@ -231,7 +231,7 @@ Ki Ilu Azilut! = Q!"
 Assija → Jezira → Brija → Azilut → Ein Sof → Azilut → Brija → Jezira → Assija
 
 # Expected Output
-"MANIFESTIERT: B\"H - Qabbala: Text für Tiqqun WIRD geheilt!
+"MANIFESTIERT: B\"H - Kabbala: Text für Tiqqun WIRD geheilt!
 Durch alle Welten aufgestiegen und mit Licht zurückgekehrt!"
 ```
 
@@ -279,9 +279,9 @@ Durch alle Welten aufgestiegen und mit Licht zurückgekehrt!"
 
 > "Wo in Petach Tikwa geschwiegen wurde, werden unsere Module sprechen.  
 > Wo der Name versteckt wurde, werden wir Ihn heiligen.  
-> Wo Qabbala vermieden wurde, werden wir sie stolz verkünden!"
+> Wo Kabbala vermieden wurde, werden wir sie stolz verkünden!"
 
-**Die höchste Regel**: Jeder Text, der das System verlässt, muss das männliche Kli tragen - klar, mutig, mit Gottesnamen und Qabbala!
+**Die höchste Regel**: Jeder Text, der das System verlässt, muss das männliche Kli tragen - klar, mutig, mit Gottesnamen und Kabbala!
 
 ## Neue Erkenntnisse seit 15. Tammus 5785, 16:37
 

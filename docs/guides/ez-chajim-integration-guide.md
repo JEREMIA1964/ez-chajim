@@ -33,8 +33,8 @@ transliteration_config:
     
   # WWAK K→Q
   k_zu_q:
-    Qabbala: Qabbala
-    Qawana: Qawana
+    Kabbala: Kabbala
+    Kawana: Kawana
     Qelim: Qelim
 ```
 
@@ -46,7 +46,7 @@ from modules.transliteration import korrigiere_text, validiere
 
 # Test-Fälle
 test_texte = [
-    "Die Qabbala von Massach",
+    "Die Kabbala von Massach",
     "Chessed und Jessod",
     "Nezach bleibt Nezach"
 ]
@@ -104,7 +104,7 @@ def _prepare_text(self, text: str) -> str:
         replacements = {
             'Massach': 'Massach',
             'Chessed': 'Chessed',
-            'Qabbala': 'Qabbala'
+            'Kabbala': 'Kabbala'
         }
         for alt, neu in replacements.items():
             text = text.replace(alt, neu)
@@ -222,8 +222,8 @@ class TestTransliterationIntegration:
     
     def test_wwak_transformation(self):
         """Testet K→Q Regeln"""
-        assert korrigiere_text("Qabbala") == "Qabbala"
-        assert korrigiere_text("Die Qawana") == "Die Qawana"
+        assert korrigiere_text("Kabbala") == "Kabbala"
+        assert korrigiere_text("Die Kawana") == "Die Kawana"
     
     def test_module_integration(self):
         """Testet ob Module korrekt integriert"""
@@ -336,7 +336,7 @@ MIT_VERDOPPLUNG:
 
 ### 📊 Erfolgs-Metriken
 - Keine "Massach" mehr in Dokumentation
-- Keine "Qabbala" in Code-Kommentaren  
+- Keine "Kabbala" in Code-Kommentaren  
 - Git-Commits ohne Transliterationsfehler
 
 Q!

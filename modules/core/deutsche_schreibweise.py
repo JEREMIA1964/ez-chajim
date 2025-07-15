@@ -49,8 +49,8 @@ class HebraischDeutschTransliterator:
             'ת': 't'      # Taw
         }
         
-        # WWAQ-spezifische Transformationen
-        self.wwaq_regeln = {
+        # WWAK-spezifische Transformationen
+        self.wwak_regeln = {
             # v→w Transformationen
             'Gevura': 'Gewura',
             'gevura': 'gewura',
@@ -230,8 +230,8 @@ class HebraischDeutschTransliterator:
             'ת': 't'      # Taw
         }
         
-        # WWAQ-spezifische Transformationen
-        self.wwaq_regeln = {
+        # WWAK-spezifische Transformationen
+        self.wwak_regeln = {
             # v→w Transformationen
             'Gevura': 'Gewura',
             'gevura': 'gewura',

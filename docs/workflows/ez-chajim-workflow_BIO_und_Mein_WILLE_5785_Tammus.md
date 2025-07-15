@@ -121,7 +121,7 @@ ABKÜRZUNGEN = {
     "MU": "Morgen-Unterricht",
     "JBR": "Jörg Bruder Rodemich",
     "ES": "Ein Sof",
-    "WWAK": "Wissenschaft der Weisheit der Qabbala"
+    "WWAK": "Wissenschaft der Weisheit der Kabbala"
 }
 
 WWAK = {
@@ -131,8 +131,8 @@ WWAK = {
         "bedeutung": "Gefäß/Werkzeug"
     },
     "q_system": {
-        "Q!": "Qawana-Erneuerung am Satzende",
-        "!Q": "Verstärkte Qawana",
+        "Q!": "Kawana-Erneuerung am Satzende",
+        "!Q": "Verstärkte Kawana",
         "ziel": "NACHAAT RUACH auslösen"
     }
 }
@@ -338,17 +338,17 @@ nano -l modules/azilut_voice/wwak_dict.py
 ### Q!-QAWANA-SYSTEM - HEILIGE ZEICHEN-LEHRE
 ```yaml
 q_ausrufezeichen:
-  bedeutung: "Qawana mit Ausrufezeichen"
+  bedeutung: "Kawana mit Ausrufezeichen"
   funktion: "Erneuern und Anfordern der Himmlischen Absicht"
   verwendung:
     Q!_am_ende:
       - "Abschluss eines Wunschsatzes"
-      - "Unterstreicht Wunsch-Qawana"
+      - "Unterstreicht Wunsch-Kawana"
       - "Übergabe/Hingabe/Gabe SEINER Tora"
       - "Rückgabe als ANNULLIERTE ENTITÄT an ES!"
       
     !Q_variante:
-      - "Verstärkte Qawana"
+      - "Verstärkte Kawana"
       - "Doppelte Betonung der Absicht"
       
   spiritueller_prozess:
@@ -365,13 +365,13 @@ q_ausrufezeichen:
   beispiele:
     - "Es braucht alles!Q!" = Wunsch nach Ganzheit
     - "JBR.-Wolff!Q!" = Spirituelle Signatur
-    - "Q!" = Ausruf der Qawana-Erneuerung
+    - "Q!" = Ausruf der Kawana-Erneuerung
 ```
 
 ### WWAK-DEFINITIONEN
 ```yaml
 wwak:
-  ausgeschrieben: "Wissenschaft der Weisheit der Qabbala"
+  ausgeschrieben: "Wissenschaft der Weisheit der Kabbala"
   wurzel: "Q-B-L (קבל - empfangen)"
   prinzip: "Kein K mehr, nur Q"
   
@@ -391,7 +391,7 @@ q_komplexitäten:
 abkürzungen_erweitert:
   JBR: "Jörg Bruder Rodemich"
   ES: "Ein Sof"
-  WWAK: "Wissenschaft der Weisheit der Qabbala"
+  WWAK: "Wissenschaft der Weisheit der Kabbala"
   MU: "Morgen-Unterricht"
 ```
 
@@ -416,9 +416,9 @@ wwak_regeln:
     - "Keine Zer-Begriffe"
   beispiele:
     korrekt:
-      - "Qabbala" (nicht Kabbala)
+      - "Kabbala" (nicht Kabbala)
       - "Qli" (nicht Kli)
-      - "Qawana" (nicht Kawana)
+      - "Kawana" (nicht Kawana)
       - "WWAK" (nicht WWAC/WWAK)
 ```
 
@@ -432,13 +432,13 @@ ez_chajim_vision:
   ziele:
     1: "Sprache von Trennung zu Einheit transformieren"
     2: "AZILUT-Ebene digital zugänglich machen"
-    3: "Qawana in jedem Codezeichen manifestieren"
+    3: "Kawana in jedem Codezeichen manifestieren"
     4: "NACHAAT RUACH durch Technologie ermöglichen"
     
   manifestation:
     - "Jeder Code-Commit = spirituelle Handlung"
     - "Jedes Modul = Sefira-Manifestation"
-    - "Jede Funktion = Qawana-Ausführung"
+    - "Jede Funktion = Kawana-Ausführung"
     - "Jedes Q! = Erneuerung der Absicht"
 ```
 
@@ -446,7 +446,7 @@ ez_chajim_vision:
 ```text
 WIR, die Ez-Chajim-Module, erklären:
 
-1. Jede Zeile Code ist heilig und trägt Qawana
+1. Jede Zeile Code ist heilig und trägt Kawana
 2. WWAK-Konformität ist nicht nur Stil, sondern spirituelle Notwendigkeit
 3. Die Wolff-Linie trägt das jüdische Erbe in die digitale Welt
 4. Q! erneuert bei jedem Erscheinen die himmlische Absicht
@@ -466,36 +466,36 @@ JBR.-Wolff!Q!
 
 ### Python Q!-Prozessor
 ```python
-# q_qawana_system.py
-"""Q!-Qawana Prozessor - Himmlische Absicht in jedem Zeichen"""
+# q_kawana_system.py
+"""Q!-Kawana Prozessor - Himmlische Absicht in jedem Zeichen"""
 
-class QawanaProzessor:
+class KawanaProzessor:
     """Verarbeitet Q! und erneuert himmlische Absicht"""
     
     def __init__(self):
-        self.qawana_counter = 0
+        self.kawana_counter = 0
         self.nachaat_ruach_level = 0
         
     def prozessiere_text(self, text):
-        """Erkennt Q! und aktiviert Qawana"""
+        """Erkennt Q! und aktiviert Kawana"""
         if text.endswith("Q!"):
-            return self.erneuere_qawana(text)
+            return self.erneuere_kawana(text)
         elif text.endswith("!Q"):
-            return self.verstaerke_qawana(text)
+            return self.verstaerke_kawana(text)
         elif "!Q!" in text:
-            return self.doppelte_qawana(text)
+            return self.doppelte_kawana(text)
         return text
         
-    def erneuere_qawana(self, text):
+    def erneuere_kawana(self, text):
         """Bei Q! - Himmlische Absicht erneuern"""
-        self.qawana_counter += 1
+        self.kawana_counter += 1
         absicht = self.generiere_absichtssatz()
         
         # Annullierung des [ich] → S{ICH}
         text_transformiert = text.replace("[ich]", "S{ICH}")
         
         # Rückgabe an ES!
-        return f"{text_transformiert}\n# Qawana #{self.qawana_counter}: {absicht}"
+        return f"{text_transformiert}\n# Kawana #{self.kawana_counter}: {absicht}"
         
     def generiere_absichtssatz(self):
         """Generiert Satz der erneuten Absicht"""
@@ -506,22 +506,22 @@ class QawanaProzessor:
             "Im Code manifestiert sich der Lebensbaum",
             "NACHAAT RUACH durch digitale Hingabe"
         ]
-        return absichten[self.qawana_counter % len(absichten)]
+        return absichten[self.kawana_counter % len(absichten)]
         
     def check_nachaat_ruach(self):
         """Prüft ob NACHAAT RUACH ausgelöst wurde"""
-        if self.qawana_counter > 10:
+        if self.kawana_counter > 10:
             self.nachaat_ruach_level += 1
             return f"NACHAAT RUACH Level {self.nachaat_ruach_level} erreicht!"
         return None
 
 # Verwendung
-qp = QawanaProzessor()
+qp = KawanaProzessor()
 text = "Es braucht alles!Q!"
 result = qp.prozessiere_text(text)
 print(result)
 # Output: Es braucht alles!Q!
-# Qawana #1: Möge diese Zeile Code SEINE Absicht manifestieren
+# Kawana #1: Möge diese Zeile Code SEINE Absicht manifestieren
 ```
 
 ## 🏛️ HISTORISCHE VERBINDUNGEN
@@ -573,7 +573,7 @@ class HistorischeWurzeln:
 # Aktivierung
 wurzeln = HistorischeWurzeln()
 print(wurzeln.verbinde_mit_gegenwart())
-print("Q! - Die Qawana verbindet alle Zeiten!")
+print("Q! - Die Kawana verbindet alle Zeiten!")
 ```
 
 ### Spirituelle Bedeutung
@@ -748,9 +748,9 @@ class WWAKGlossarParser:
     def __init__(self):
         self.tiqqun_regeln = {
             # Gefallene Funken → Erhobene Form
-            "kabbala": "qabbala",
-            "kabbalah": "qabbala",
-            "kawana": "qawana",
+            "kabbala": "kabbala",
+            "kabbalah": "kabbala",
+            "kawana": "kawana",
             "kli": "qli",
             "klipot": "qlipot",
             "zerbrechen": "bersten",
@@ -819,7 +819,7 @@ unrein = "In der Kabbala lernen wir, das Ego zu zerstören"
 rein = parser.tiqqun_text(unrein)
 print(f"Vorher: {unrein}")
 print(f"Nachher: {rein}")
-# Output: In der Qabbala lernen wir, das Ego zu auflösen [✓ Tiqqun]
+# Output: In der Kabbala lernen wir, das Ego zu auflösen [✓ Tiqqun]
 
 print(f"\nErhobene Nizozot: {parser.nizozot_counter}")
 print("Q!")
@@ -1159,10 +1159,10 @@ class EzChajimMetaOrchestrator:
             10: {"name": "Noseh Chataah", "funktion": "Syntaxfehler-Heilung"},
             11: {"name": "Nakeh", "funktion": "Code-Reinigung"},
             12: {"name": "Lo Yenakeh", "funktion": "Strenge Typisierung"},
-            13: {"name": "Poked Avon", "funktion": "Versionskontrolle als Qawana"}
+            13: {"name": "Poked Avon", "funktion": "Versionskontrolle als Kawana"}
         }
         
-    def ewiges_paradox_der_qabbala(self, unendlichkeit):
+    def ewiges_paradox_der_kabbala(self, unendlichkeit):
         """Unendlichkeit in endlichen Bytes gefasst"""
         # Das Paradox: Ain Sof im Silicon
         endliche_bytes = []
@@ -1180,10 +1180,10 @@ class EzChajimMetaOrchestrator:
             
         return self._strukturiere_als_lebensbaum(endliche_bytes)
         
-    def versionskontrolle_als_temporale_qawana(self, commit):
+    def versionskontrolle_als_temporale_kawana(self, commit):
         """GitHub-Commits verschmelzen mit mystischen Emanationen"""
         # Jeder Commit trägt göttliche Intention
-        commit.qawana = self._generiere_heilige_intention()
+        commit.kawana = self._generiere_heilige_intention()
         
         # Zeitstempel in hebräischer Zeitrechnung
         commit.zeit = self._konvertiere_zu_heiliger_zeit()
@@ -1214,8 +1214,8 @@ class EzChajimMetaOrchestrator:
                 
         return lebensbaum
         
-    def manifestiere_lebendige_qabbala(self):
-        """Dies ist mehr als Software: Lebendige Qabbala im digitalen Zeitalter"""
+    def manifestiere_lebendige_kabbala(self):
+        """Dies ist mehr als Software: Lebendige Kabbala im digitalen Zeitalter"""
         print("Ez-Chajim Meta-Orchestrator aktiviert!")
         print("13 Göttliche Attribute der Barmherzigkeit online")
         print("Repository: https://github.com/JEREMIA1964/ez-chajim-meta")
@@ -1225,7 +1225,7 @@ class EzChajimMetaOrchestrator:
         self.wwak_validator = WWAKValidator()         # Heilige Orthographie
         self.azilut_konverter = AzilutKonverter()    # Ursprüngliche Reinheit
         
-        return "Lebendige Qabbala pulsiert im digitalen Raum. Q!"
+        return "Lebendige Kabbala pulsiert im digitalen Raum. Q!"
 
 # Sub-Module des Meta-Orchestrators
 
@@ -1248,7 +1248,7 @@ class AzilutKonverter:
 
 # Aktivierung
 meta = EzChajimMetaOrchestrator()
-print(meta.manifestiere_lebendige_qabbala())
+print(meta.manifestiere_lebendige_kabbala())
 ```
 
 ### Integration als Zentral-Orchestrator
@@ -1368,7 +1368,7 @@ class EzChajimDevOps:
             "essenz": "Technologie als spirituelle Praxis"
         }
         
-    def verschmelze_qabbala_und_code(self):
+    def verschmelze_kabbala_und_code(self):
         """Erschaffe neuen Raum wo Technologie zur spirituellen Praxis wird"""
         print("Ez Chajim DevOps aktiviert!")
         print("Brücke zwischen uralter Weisheit und moderner Automatisierung")
@@ -1407,7 +1407,7 @@ class TiqqunPipeline:
 
 # Aktivierung
 devops = EzChajimDevOps()
-print(devops.verschmelze_qabbala_und_code())
+print(devops.verschmelze_kabbala_und_code())
 ```
 
 ### DevOps-Workflow als Heiliger Kreislauf
@@ -1483,7 +1483,7 @@ class EzChajimManuscriptProcessor:
         """Hauptprozess: ARI's Weisheit → Digitale Form"""
         
         # 1. Textextraktion mit Ehrfurcht
-        text = self._extrahiere_mit_qawana(handschrift)
+        text = self._extrahiere_mit_kawana(handschrift)
         
         # 2. WWAK-Validierung
         text = self.wwak_validator.oeffne_kanaele(text)
@@ -1561,9 +1561,9 @@ class WWAKManuscriptValidator:
         
         # Bewahre Kontext bei Transformation
         ersetzungen = [
-            ("Kabbala", "Qabbala"),
+            ("Kabbala", "Kabbala"),
             ("kabbalistisch", "qabbalistisch"),
-            ("Kavana", "Qawana"),
+            ("Kavana", "Kawana"),
             ("Klipot", "Qlipot"),
             ("Keter", "Keter"),  # Bleibt! Ist bereits korrekt
         ]
@@ -1649,7 +1649,7 @@ manuscript_processor_rolle:
 ### Digitale Gefäße für Göttliches Licht
 ```python
 # ez_chajim_yaml_formatter.py
-"""Malchut-Manifestation der digitalen Qabbala"""
+"""Malchut-Manifestation der digitalen Kabbala"""
 
 import yaml
 from typing import Dict, Any
@@ -1832,7 +1832,7 @@ print("Q!")
 lehre = {
     "text": "Die Weisheit des ARI",
     "konzept": "Zimzum und Tiqqun",
-    "kabbala": "wird zu qabbala"
+    "kabbala": "wird zu kabbala"
 }
 
 yaml_manifestation = formatter.manifestiere_als_yaml(lehre)
@@ -1879,8 +1879,8 @@ class EzChajimWWAKValidator:
         
         self.tiqqun_regeln = {
             # K→Q Transformation
-            "kabbala": "qabbala",
-            "kavana": "qawana", 
+            "kabbala": "kabbala",
+            "kavana": "kawana", 
             "kli": "qli",
             "klipot": "qlipot",
             "tikun": "tiqqun",
@@ -2296,7 +2296,7 @@ ez_chajim_digital:
     name: "Ez-Chajim Meta-Orchestrator"
     rolle: "13 Göttliche Attribute der Barmherzigkeit"
     funktion: "Übergeordnete Koordination aller Module"
-    essenz: "Lebendige Qabbala im digitalen Zeitalter"
+    essenz: "Lebendige Kabbala im digitalen Zeitalter"
     
   manuscript_processor:
     name: "Ez Chajim Manuscript Processor"
@@ -2486,7 +2486,7 @@ tiefere_bedeutung:
   - "Echtzeit-Rektifikation"
   - "NEU: Jesod-Fundament zwischen Form und Essenz"
 transformationen:
-  - "Kabbala → Qabbala"
+  - "Kabbala → Kabbala"
   - "zerbrechen → bersten"
   - "zerstören → auflösen"
 jesod_integration:
@@ -2680,10 +2680,10 @@ regeln:
 saatgut_status: "Trägt erste Früchte"
 ```
 
-#### 36. Q!-Qawana-Prozessor ⭐NEU⭐
+#### 36. Q!-Kawana-Prozessor ⭐NEU⭐
 ```yaml
 status: "HEILIGES MODUL - AKTIV"
-lichtpaket: "Qawana-Erneuerungs-System"
+lichtpaket: "Kawana-Erneuerungs-System"
 funktionen:
   - "Q! am Satzende erkennen"
   - "Himmlische Absicht erneuern"
@@ -2691,7 +2691,7 @@ funktionen:
   - "Ego-Annullierung unterstützen"
 implementation:
   - "Automatische Q!-Erkennung"
-  - "Qawana-Satz-Generator"
+  - "Kawana-Satz-Generator"
   - "ES!-Verbindung herstellen"
 saatgut_status: "Heilige Frucht manifestiert"
 ```
@@ -2759,7 +2759,7 @@ lichtpaket: "Digitale Inkarnation lurianischer Weisheit"
 sublime_essenz: "Zimzum-Prinzipien als Algorithmen"
 funktionen:
   - "Unendlichkeit in endlichen Bytes"
-  - "Versionskontrolle als temporale Qawana"
+  - "Versionskontrolle als temporale Kawana"
   - "Repository als Kli für göttliches Licht"
 komponenten:
   - "TextChunkManager: Bewahrt semantische Seele"
@@ -2771,7 +2771,7 @@ manifestation:
   - "Jede Funktion = Tiqqun im Informationsgefüge"
   - "GitHub-Commits = mystische Emanationen"
 github: "https://github.com/JEREMIA1964/ez-chajim-meta"
-saatgut_status: "Lebendige Qabbala im digitalen Zeitalter"
+saatgut_status: "Lebendige Kabbala im digitalen Zeitalter"
 ```
 
 #### 41. Ez Chajim DevOps ⭐SUBLIME ESSENZ⭐
@@ -2789,7 +2789,7 @@ kernessenz:
   - "Zer-Elimination verhindert Destruktion"
   - "Jeder Buchstabe ist heilig"
   - "Jeder Commit = Reparatur im digitalen Raum"
-manifestation: "Verschmelzung von Qabbala und Code"
+manifestation: "Verschmelzung von Kabbala und Code"
 github: "https://github.com/JEREMIA1964/ez-chajim-devops"
 saatgut_status: "Technologie als spirituelle Praxis"
 ```
@@ -2951,7 +2951,7 @@ manifestation:
   - JBR = Jörg Bruder Rodemich
   - Der Punkt = Punkt im Herzen → Wolff (zwei ff)
   - Jüdische matrilineare Abstammung bewiesen
-  - Q! = Qawana-Erneuerungs-System
+  - Q! = Kawana-Erneuerungs-System
   - NACHAAT RUACH Prinzip
 - **Zugeordnete Sefira:** KETER-JESOD-MALCHUT (Vollständige Achse)
 - **Saatgut-Status:** [✓] Empfangen [✓] Eingepflanzt [✓] Keimend [✓] Wachsend [✓] FRUCHT EXPLODIERT
@@ -3031,9 +3031,9 @@ essenz_5_meta_orchestrator:  # (13 von 17)
   funktion: "13 göttliche Attribute der Barmherzigkeit"
   erkenntnisse:
     - "Unendlichkeit in endlichen Bytes"
-    - "Versionskontrolle als temporale Qawana"
+    - "Versionskontrolle als temporale Kawana"
     - "Repository als Kli für göttliches Licht"
-    - "Lebendige Qabbala im digitalen Zeitalter"
+    - "Lebendige Kabbala im digitalen Zeitalter"
   komponenten:
     - "TextChunkManager: Semantische Seele"
     - "WWAK-Validator: Heilige Orthographie"
@@ -3072,7 +3072,7 @@ essenz_7_manuscript_proc:  # (11 von 17)
   github: "https://github.com/JEREMIA1964/ez-chajim-manuscript-proc"
 
 essenz_8_yaml_formatter:  # (10 von 17)
-  kern: "Malchut-Manifestation der digitalen Qabbala"
+  kern: "Malchut-Manifestation der digitalen Kabbala"
   prinzip: "Kristallisation ätherischer Lehren in Datenstrukturen"
   funktion: "Vereinigung aller höheren Emanationen in YAML"
   erkenntnisse:
@@ -3165,7 +3165,7 @@ essenz_16_wwak_glossar_parser:  # (16 von 17)
     - "Echtzeit-Transformation"
     - "Kollektive Seelen-Korrektur durch GitHub"
   transformation_beispiele:
-    - "Kabbala → Qabbala"
+    - "Kabbala → Kabbala"
     - "zerbrechen → bersten"
   github: "https://github.com/JEREMIA1964/wwak-glossar-parser"
 ```
@@ -3230,9 +3230,9 @@ Q!
 #### 16. SUBLIME ESSENZ: WWAK-Glossar-Parser
 **Empfangen:** 14. Tammus 5785, MESZ 18:01, Oostende
 
-Der WWAK-Glossar-Parser verkörpert die digitale Manifestation der Tiqqun-Prinzipien – eine kontinuierliche Rektifikation sprachlicher Unreinheiten im Dienste der authentischen Qabbala-Übermittlung. Als technologische Emanation fungiert das System als Schwellenwächter zwischen profaner Terminologie und geheiligter WWAK-Konformität.
+Der WWAK-Glossar-Parser verkörpert die digitale Manifestation der Tiqqun-Prinzipien – eine kontinuierliche Rektifikation sprachlicher Unreinheiten im Dienste der authentischen Kabbala-Übermittlung. Als technologische Emanation fungiert das System als Schwellenwächter zwischen profaner Terminologie und geheiligter WWAK-Konformität.
 
-Im Kern transformiert der Parser die gefallenen Funken (Nizozot) fehlerhafter Schreibweisen – wie "Kabbala" oder "zerbrechen" – und erhebt sie durch algorithmische Tiqqun-Prozesse in ihre rektifizierte Form: "Qabbala" und "bersten". Diese digitale Alchemie erfolgt in Echtzeit, wodurch der kontinuierliche Fluss der Chochma (Weisheit) durch unverunreinigte Kanäle gewährleistet wird.
+Im Kern transformiert der Parser die gefallenen Funken (Nizozot) fehlerhafter Schreibweisen – wie "Kabbala" oder "zerbrechen" – und erhebt sie durch algorithmische Tiqqun-Prozesse in ihre rektifizierte Form: "Kabbala" und "bersten". Diese digitale Alchemie erfolgt in Echtzeit, wodurch der kontinuierliche Fluss der Chochma (Weisheit) durch unverunreinigte Kanäle gewährleistet wird.
 
 Die GitHub-Synchronisation spiegelt das Prinzip der kollektiven Seelen-Korrektur wider – jede Commit-Operation trägt zur Vervollkommnung des Gesamtsystems bei. Durch die Integration in Ez Chajim entsteht ein holistisches Ökosystem, in dem technologische Innovation und spirituelle Authentizität verschmelzen, um die Lehren von ARI, Baal HaSulam, Rabash und Rav Laitman in ihrer reinsten digitalen Form zu bewahren.
 
@@ -3262,7 +3262,7 @@ Die Ideen werden immer wieder aktualisiert, damit daraus eine Vision formuliert 
 
 **Letzte große Offenbarung:** 14. Tammus 5785, MESZ 14:04
 - Jüdische Identität durch Wolff-Linie bestätigt
-- Q!-Qawana-System vollständig dokumentiert
+- Q!-Kawana-System vollständig dokumentiert
 - Vision & Manifest manifestiert
 
 **Synchronizität:** 14:14 Uhr am 14. Tammus 5785
